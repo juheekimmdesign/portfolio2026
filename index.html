@@ -10,14 +10,24 @@ The similarity to the actual commercial site is purely for design practice.
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>김주희의 포트폴리오</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>김주희의 포트폴리오</title>
+    <!--swiper 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--swiper 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- 플러그인, 웹글꼴 연결 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css" type="text/css"/>
+    <!-- 개별 사용자 디자인 파일 -->
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
     <script src="./scripts/index.js" defer></script>
 </head>
 <body>
-    <header>
+    <header><!-- 고정 -->
         <ul id="gnb">
             <li><a href="#">INTRO</a></li>
             <li><a href="#">PROFILE</a></li>
@@ -77,8 +87,8 @@ The similarity to the actual commercial site is purely for design practice.
             </div>
             <div class="myskills">
                 <ul>
-                    <li class="github">
-                        <a href="#" target="_blank">
+                    <li class="git-Hub" title="git-Hub 바로가기">
+                        <a href="https://github.com/juheekimmdesign" target="_blank">
                             <img src="" alt="Git-hub">
                             <p>Git-hub</p>
                         </a>
@@ -132,7 +142,7 @@ The similarity to the actual commercial site is purely for design practice.
                         <p>FlieZilla</p>
                     </li>
                     <li>
-                        <img src="" alt="PHP">
+                        <img src="" alt="PHP" >
                         <p>PHP</p>
                     </li>
                     <li>
@@ -151,32 +161,40 @@ The similarity to the actual commercial site is purely for design practice.
             </div>
         </div>
     </div>
-    <ul class="project_list">
-        <li class="list list1">
-            <a href="#">
-                <h1>TOUN 28</h1>
-                <p>친환경 뷰티 브랜드 톤28 | 웹사이트 리디자인</p>
-            </a>
-        </li>
-        <li class="list list2">
-            <a href="#">
-                <h1>CUBEE</h1>
-                <p>큐브 엔터테인먼트 굿즈몰 | 웹사이트 리디자인</p>
-            </a>
-        </li>
-        <li class="list list3">
-            <a href="#">
-                <h1>CONTENTS DESIGN</h1>
-                <p>Banner | Detail | Contents</p>
-            </a>
-        </li>
-        <li class="list list4">
-            <a href="#">
-                <h1>UXUI DESIGN</h1>
-                <p>1인 경험 Ghost It | 스타벅스 리디자인 | 수영 기록 UPPUU</p>
-            </a>
-        </li>
-    </ul>
+    <div class="swiper project_swiper">
+        <div class="siwper-wrapper">
+            <div class="swiper-slide slide1">
+                <a href="#">
+                    <h1>TOUN 28</h1>
+                    <p>친환경 뷰티 브랜드 톤28 | 웹사이트 리디자인</p>
+                </a>
+            </div>
+            <div class="swiper-slide slide2">
+                <a href="#">
+                    <h1>CUBEE</h1>
+                    <p>큐브 엔터테인먼트 굿즈몰 | 웹사이트 리디자인</p>
+                </a>
+            </div>
+            <div class="swiper-slide slide3">
+                <a href="#">
+                    <h1>CONTENTS DESIGN</h1>
+                    <p>Banner | Detail | Contents</p>
+                </a>
+            </div>
+            <div class="swiper-slide slide4">
+                <a href="#">
+                    <h1>UXUI DESIGN</h1>
+                    <p>1인 경험 Ghost It | 스타벅스 리디자인 | 수영 기록 UPPUU</p>
+                </a>
+            </div>
+            <div class="swiper-slide slide5">
+                <a href="#">
+                    <h1>VIDEO DESIGN</h1>
+                    <p>Apple Music | Stanley | Bread Intro</p>
+                </a>
+            </div>
+        </div>
+    </div>
     <!-- 프로젝트 시작 -->
     <!-- 웹디자인 시작 -->
     <div class="project project1">
@@ -273,20 +291,206 @@ The similarity to the actual commercial site is purely for design practice.
             <dt>## Graphic Design</dt>
             <dd>이미지를 클릭하면 크게 볼 수 있습니다</dd>
         </dl>
-        <div class="graphic_container">
-            <a href="#"><img src="" alt=""></a>
-            <a href="#"><img src="" alt=""></a>
-            <a href="#"><img src="" alt=""></a>
-            <a href="#"><img src="" alt=""></a>
-            <a href="#"><img src="" alt=""></a>
-            <a href="#"><img src="" alt=""></a>
-            <a href="#"><img src="" alt=""></a>
+        <div class="swiper graphic_siwper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1">
+                    <a href="#"></a><!-- Background-img -->
+                </div>
+                <div class="swiper-slide slide2">
+                    <a href="#"></a>
+                </div>
+                <div class="swiper-slide slide3">
+                    <a href="#"></a>
+                </div>
+                <div class="swiper-slide slide4">
+                    <a href="#"></a>
+                </div>
+                <div class="swiper-slide slide5">
+                    <a href="#"></a>
+                </div>
+                <div class="swiper-slide slide6">
+                    <a href="#"></a>
+                </div>
+                <div class="swiper-slide slide7">
+                    <a href="#"></a>
+                </div>
+            </div>
         </div>
         <!-- (위) 그래픽 클릭시 실행되는 팝업 -->
         <div class="graphic_popup_bg" title="아무 곳이나 클릭하면 팝업이 닫힙니다">
             <div class="popup">
                 <p>아무 곳이나 클릭하면 팝업이 닫힙니다 <button type="button" id="close">X</button></p>
                 <img src="" alt="">
+                <a href="">close<img src="" alt="close_btn"></a>
+            </div>
+            <div class="scroll">
+                <p>스크롤을 내려주세요.</p>
+                <img src="" alt="scroll_down">
+            </div>
+            <div class="popup_info">
+                <div class="popup_title">
+                    <h1>## Dermatology Event Banner</h1>
+                    <ul class="info_skill"> 
+                        <li>4 hours</li>
+                        <li>Photoshop</li>
+                        <li>Illustration</li>
+                    </ul>
+                </div>
+                <p>JUVELOOK i 정품 인증 이벤트를 주제로 제작한 피부과 프로모션 배너입니다. 정품 사용 병원의 신뢰감과 프리미엄 스킨부스터 이미지를 강조하였으며, 간결한 레이아웃과 고급스러운 무드로 시술 이벤트를 직관적으로 전달할 수 있도록 디자인하였습니다.</p>
+            </div>
+        </div>
+        <div class="graphic_popup_bg" title="아무 곳이나 클릭하면 팝업이 닫힙니다">
+            <div class="popup">
+                <p>아무 곳이나 클릭하면 팝업이 닫힙니다 <button type="button" id="close">X</button></p>
+                <img src="" alt="">
+                <a href="">close<img src="" alt="close_btn"></a>
+            </div>
+            <div class="scroll">
+                <p>스크롤을 내려주세요.</p>
+                <img src="" alt="scroll_down">
+            </div>
+            <div class="popup_info">
+                <div class="popup_title">
+                    <h1>## Dermatology Event Banner</h1>
+                    <ul class="info_skill"> 
+                        <li>4 hours</li>
+                        <li>Photoshop</li>
+                        <li>Illustration</li>
+                    </ul>
+                </div>
+                <p>JUVELOOK i 정품 인증 이벤트를 주제로 제작한 피부과 프로모션 배너입니다. 정품 사용 병원의 신뢰감과 프리미엄 스킨부스터 이미지를 강조하였으며, 간결한 레이아웃과 고급스러운 무드로 시술 이벤트를 직관적으로 전달할 수 있도록 디자인하였습니다.</p>
+            </div>
+        </div>
+        <div class="graphic_popup_bg" title="아무 곳이나 클릭하면 팝업이 닫힙니다">
+            <div class="popup">
+                <p>아무 곳이나 클릭하면 팝업이 닫힙니다 <button type="button" id="close">X</button></p>
+                <img src="" alt="">
+                <a href="">close<img src="" alt="close_btn"></a>
+            </div>
+            <div class="scroll">
+                <p>스크롤을 내려주세요.</p>
+                <img src="" alt="scroll_down">
+            </div>
+            <div class="popup_info">
+                <div class="popup_title">
+                    <h1>## Dermatology Event Banner</h1>
+                    <ul class="info_skill"> 
+                        <li>4 hours</li>
+                        <li>Photoshop</li>
+                        <li>Illustration</li>
+                    </ul>
+                </div>
+                <p>JUVELOOK i 정품 인증 이벤트를 주제로 제작한 피부과 프로모션 배너입니다. 정품 사용 병원의 신뢰감과 프리미엄 스킨부스터 이미지를 강조하였으며, 간결한 레이아웃과 고급스러운 무드로 시술 이벤트를 직관적으로 전달할 수 있도록 디자인하였습니다.</p>
+            </div>
+        </div>
+        <div class="graphic_popup_bg" title="아무 곳이나 클릭하면 팝업이 닫힙니다">
+            <div class="popup">
+                <p>아무 곳이나 클릭하면 팝업이 닫힙니다 <button type="button" id="close">X</button></p>
+                <img src="" alt="">
+                <a href="">close<img src="" alt="close_btn"></a>
+            </div>
+            <div class="scroll">
+                <p>스크롤을 내려주세요.</p>
+                <img src="" alt="scroll_down">
+            </div>
+            <div class="popup_info">
+                <div class="popup_title">
+                    <h1>## Dermatology Event Banner</h1>
+                    <ul class="info_skill"> 
+                        <li>4 hours</li>
+                        <li>Photoshop</li>
+                        <li>Illustration</li>
+                    </ul>
+                </div>
+                <p>JUVELOOK i 정품 인증 이벤트를 주제로 제작한 피부과 프로모션 배너입니다. 정품 사용 병원의 신뢰감과 프리미엄 스킨부스터 이미지를 강조하였으며, 간결한 레이아웃과 고급스러운 무드로 시술 이벤트를 직관적으로 전달할 수 있도록 디자인하였습니다.</p>
+            </div>
+        </div>
+        <div class="graphic_popup_bg" title="아무 곳이나 클릭하면 팝업이 닫힙니다">
+            <div class="popup">
+                <p>아무 곳이나 클릭하면 팝업이 닫힙니다 <button type="button" id="close">X</button></p>
+                <img src="" alt="">
+                <a href="">close<img src="" alt="close_btn"></a>
+            </div>
+            <div class="scroll">
+                <p>스크롤을 내려주세요.</p>
+                <img src="" alt="scroll_down">
+            </div>
+            <div class="popup_info">
+                <div class="popup_title">
+                    <h1>## Dermatology Event Banner</h1>
+                    <ul class="info_skill"> 
+                        <li>4 hours</li>
+                        <li>Photoshop</li>
+                        <li>Illustration</li>
+                    </ul>
+                </div>
+                <p>JUVELOOK i 정품 인증 이벤트를 주제로 제작한 피부과 프로모션 배너입니다. 정품 사용 병원의 신뢰감과 프리미엄 스킨부스터 이미지를 강조하였으며, 간결한 레이아웃과 고급스러운 무드로 시술 이벤트를 직관적으로 전달할 수 있도록 디자인하였습니다.</p>
+            </div>
+        </div>
+        <div class="graphic_popup_bg" title="아무 곳이나 클릭하면 팝업이 닫힙니다">
+            <div class="popup">
+                <p>아무 곳이나 클릭하면 팝업이 닫힙니다 <button type="button" id="close">X</button></p>
+                <img src="" alt="">
+                <a href="">close<img src="" alt="close_btn"></a>
+            </div>
+            <div class="scroll">
+                <p>스크롤을 내려주세요.</p>
+                <img src="" alt="scroll_down">
+            </div>
+            <div class="popup_info">
+                <div class="popup_title">
+                    <h1>## Dermatology Event Banner</h1>
+                    <ul class="info_skill"> 
+                        <li>4 hours</li>
+                        <li>Photoshop</li>
+                        <li>Illustration</li>
+                    </ul>
+                </div>
+                <p>JUVELOOK i 정품 인증 이벤트를 주제로 제작한 피부과 프로모션 배너입니다. 정품 사용 병원의 신뢰감과 프리미엄 스킨부스터 이미지를 강조하였으며, 간결한 레이아웃과 고급스러운 무드로 시술 이벤트를 직관적으로 전달할 수 있도록 디자인하였습니다.</p>
+            </div>
+        </div>
+        <div class="graphic_popup_bg" title="아무 곳이나 클릭하면 팝업이 닫힙니다">
+            <div class="popup">
+                <p>아무 곳이나 클릭하면 팝업이 닫힙니다 <button type="button" id="close">X</button></p>
+                <img src="" alt="">
+                <a href="">close<img src="" alt="close_btn"></a>
+            </div>
+            <div class="scroll">
+                <p>스크롤을 내려주세요.</p>
+                <img src="" alt="scroll_down">
+            </div>
+            <div class="popup_info">
+                <div class="popup_title">
+                    <h1>## Dermatology Event Banner</h1>
+                    <ul class="info_skill"> 
+                        <li>4 hours</li>
+                        <li>Photoshop</li>
+                        <li>Illustration</li>
+                    </ul>
+                </div>
+                <p>JUVELOOK i 정품 인증 이벤트를 주제로 제작한 피부과 프로모션 배너입니다. 정품 사용 병원의 신뢰감과 프리미엄 스킨부스터 이미지를 강조하였으며, 간결한 레이아웃과 고급스러운 무드로 시술 이벤트를 직관적으로 전달할 수 있도록 디자인하였습니다.</p>
+            </div>
+        </div>
+        <div class="graphic_popup_bg" title="아무 곳이나 클릭하면 팝업이 닫힙니다">
+            <div class="popup">
+                <p>아무 곳이나 클릭하면 팝업이 닫힙니다 <button type="button" id="close">X</button></p>
+                <img src="" alt="">
+                <a href="">close<img src="" alt="close_btn"></a>
+            </div>
+            <div class="scroll">
+                <p>스크롤을 내려주세요.</p>
+                <img src="" alt="scroll_down">
+            </div>
+            <div class="popup_info">
+                <div class="popup_title">
+                    <h1>## Dermatology Event Banner</h1>
+                    <ul class="info_skill"> 
+                        <li>4 hours</li>
+                        <li>Photoshop</li>
+                        <li>Illustration</li>
+                    </ul>
+                </div>
+                <p>JUVELOOK i 정품 인증 이벤트를 주제로 제작한 피부과 프로모션 배너입니다. 정품 사용 병원의 신뢰감과 프리미엄 스킨부스터 이미지를 강조하였으며, 간결한 레이아웃과 고급스러운 무드로 시술 이벤트를 직관적으로 전달할 수 있도록 디자인하였습니다.</p>
             </div>
         </div>
     </div>
@@ -399,6 +603,73 @@ The similarity to the actual commercial site is purely for design practice.
             <img src="" alt="">
             <div class="link">
                 <a href="#"  target="_blank">proposal</a>
+            </div>
+        </div>
+    </div>
+    <!-- 영상 디자인 시작 -->
+    <div class="project project7">
+        <dl>
+            <dt>## Video Design</dt>
+            <dd>좌우로 스크롤을 해주세요.<img src="" alt="scroll"></dd>
+        </dl>
+        <div class="swiper video_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1">
+                    <a href="https://youtu.be/_oaYUoU-9Y8?si=N6_lHhwLOuzDThGQ" target="_blank">
+                        <img src="" alt="">
+                        <div class="title">
+                            <h1>2021 국내산 우유·치즈 9초컷 광고 콘테스트</h1>
+                            <ul class="info_skill"> 
+                                <li>1 week</li>
+                                <li>최우수상 당선</li>
+                                <li>Premier Pro</li>
+                                <li>After Effect</li>
+                            </ul>
+                        </div>
+                        <p>2021 국내산 우유·치즈 9초컷 광고 콘테스트에서 최우수상을 수상한 광고 영상입니다.엄마가 딸에게 전하는 메시지를 나레이션으로 담아 감성적인 분위기를 연출했으며,짧은 러닝타임 안에서도 따뜻한 공감과 브랜드 이미지를 효과적으로 전달할 수 있도록 제작했습니다.</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slide2">
+                    <a href="https://www.youtube.com/watch?v=S4045IyacbI" target="_blank">
+                        <img src="" alt="">
+                        <div class="title">
+                            <h1>Stanley Holiday Collection Promotion Video</h1>
+                            <ul class="info_skill"> 
+                                <li>5 hours</li>
+                                <li>Premier Pro</li>
+                                <li>AI :: Nano Banana</li>
+                            </ul>
+                        </div>
+                        <p>스탠리 1913 X 러브쉐이크팬시의 새로운 홀리데이 컬렉션을 소개하는 홍보영상입니다.제품의 디자인과 실용성을 강조하며, 스탠리만의 감각적인 브랜드 무드를 영상으로 표현했습니다. Adobe Premiere Pro를 활용하여 편집 작업을 진행하였으며,영상 제작에는 나노바나나 AI를 활용했습니다.</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slide3">
+                    <a href="https://www.youtube.com/watch?v=au7PqaG6JME" target="_blank">
+                        <img src="" alt="">
+                        <div class="title">
+                            <h1>Apple Music Promotion Video</h1>
+                            <ul class="info_skill"> 
+                                <li>1 week</li>
+                                <li>Premier Pro</li>
+                                <li>After Effect</li>
+                            </ul>
+                        </div>
+                        <p>‘지금 나에게 맞춰지는 뮤직’이라는 주제로 제작한 애플뮤직 추천 음악 홍보영상입니다.사용자의 취향과 분위기에 맞춰 음악이 추천되는 경험을 감각적인 영상 연출로 표현했습니다. Adobe Premiere Pro와 After Effects를 활용하여 편집 및 모션그래픽 작업을 진행하였으며,영상 소스는 Pixabay를 사용하여 제작했습니다.</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slide4">
+                    <a href="https://youtube.com/shorts/r-IntHLKmak?si=0TXuSpZ5Nm0DlBfs" target="_blank">
+                        <img src="" alt="">
+                        <div class="title">
+                            <h1>European Bread Intro Motion</h1>
+                            <ul class="info_skill"> 
+                                <li>3 hours</li>
+                                <li>After Effect</li>
+                            </ul>
+                        </div>
+                        <p>유럽 여러 나라의 빵과 유래를 주제로 제작한 인트로 모션 영상입니다. After Effects를 활용하여 짧은 오프닝 형식으로 제작했으며,타이포그래피와 모션을 중심으로 감각적인 분위기를 표현했습니다.</p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
