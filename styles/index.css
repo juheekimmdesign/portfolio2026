@@ -4,3 +4,272 @@
   This CSS is part of a student project. 
   Any resemblance to real-world commercial sites is purely for design practice.
 */
+@font-face{
+  font-family: 'DejaVuSansMono';
+  src:url('../fonts/DejaVuSansMono.ttf')
+}
+@font-face{
+  font-family: 'Paperlogy';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+}
+body {max-width: 1680px;}
+header {
+  position: fixed; width: 100vw; height: 80px;
+  border-bottom: 1px solid #222; background:#fff;
+}
+header #gnb {
+  display: flex; justify-content: end; align-items: end; 
+}
+header #gnb li {}
+header #gnb li a {
+  display: block; width: 228px; height: 60px;
+  background: url(../images/gnb.svg);
+  background-repeat: no-repeat;
+  text-align: center; line-height: 60px;
+  position: absolute;  top: 19px; height: 60px;
+  font-family: 'DejaVuSansMono';
+  color: #aaa;
+  }
+header #gnb li a.active {
+  top: 20px; color: #222;
+  background: url(../images/gnb_active.svg);
+}
+header #gnb li:nth-child(1) a {right: 370px; z-index: 999; } 
+header #gnb li:nth-child(2) a {right: 200px;z-index: 998;}
+header #gnb li:nth-child(3) a {right: 30px;  z-index: 997;}
+#intro {
+  width: 100vw; height: 90vh;
+  background: yellow;
+}
+#intro .intro_wrap {text-align: center; padding: 40vh;}
+#intro .intro_wrap h1 {font-size: 7.50rem; font-family: 'Paperlogy'; margin-bottom: 40px;}
+#intro .intro_wrap .me {display: flex; justify-content: center; align-items: center; gap: 8px;}
+#intro .intro_wrap .me p {font-family: 'DejaVuSansMono'; font-size: 1.13rem; color: #555;}
+#intro .intro_wrap .me span {width: 70px; height: 1px; background: #ddd;}
+#profile {}
+#profile .introduction {}
+#profile .introduction p {}
+#profile .introduction h1 {}
+#profile .introduction .photo {}
+#profile .introduction .photo img {}
+#profile .my_info {}
+#profile .my_info .info{}
+#profile .my_info .info h1 {}
+#profile .my_info .info p {}
+#profile .my_info .info a {}
+#profile .my_info .information {}
+#profile .my_info .information h1 {}
+#profile .my_info .information p {}
+#profile .my_info .information a {}
+#profile .my_info .career {}
+#profile .my_info .career h1 {}
+#profile .my_info .career p {}
+#profile .my_info .certificate {}
+#profile .my_info .certificate h1 {}
+#profile .my_info .certificate p {}
+#profile .my_info .education {}
+#profile .my_info .education h1 {}
+#profile .my_info .education p {}
+#profile .my_info .experience {}
+#profile .my_info .experience h1 {}
+#profile .my_info .experience p {}
+#profile .my_info .my_skills {}
+#profile .my_info .my_skills img {}
+.project_wrap {}
+.project_wrap .view {}
+.project_wrap .view p {}
+.project_wrap .view img {}
+.project_wrap .swiper {}
+.project_wrap .swiper .swiper-wrapper {}
+.project_wrap .swiper .swiper-wrapper .swiper-slide {}
+.project_wrap .swiper .swiper-wrapper .swiper-slide a {}
+.project_wrap .swiper .swiper-wrapper .swiper-slide a h1 {}
+.project_wrap .swiper .swiper-wrapper .swiper-slide a p {}
+.project_wrap .swiper .swiper-wrapper .swiper-slide a p span {}
+.project_wrap .project_swiper {}
+.project_wrap .project_swiper .swiper-slide {}
+.project_wrap .project_swiper .swiper-slide .slide1 {}
+.project_wrap .project_swiper .swiper-slide .slide2 {}
+.project_wrap .project_swiper .swiper-slide .slide3 {}
+.project_wrap .project_swiper .swiper-slide .slide4 {}
+.project_wrap .project_swiper .swiper-slide .slide5 {}
+.project_wrap .project_swiper .swiper-slide .slide6 {}
+.project_wrap .project_swiper .swiper-slide .slide7 {}
+.project_wrap .scroll {}
+
+/* 공통 프로젝트 */
+.project {}
+.project .project_intro .title {}
+.project .project_intro .title .type {}
+.project .project_intro .title .type .main_title {}
+.project .project_intro .title .type .main_title .brand {}
+.project .project_intro .title .type .main_title .desktop {}
+.project .project_intro .title .type .main_title .movile {}
+.project .project_intro .title .type .ko_title {}
+.project .project_intro .title .type .en_title {}
+.project .project_intro .title .type .en_title {}
+.project .project_intro .title .type .responsive {}
+.project .project_intro dl {}
+.project .project_intro dl dt {}
+.project .project_intro dl dd {}
+.project .project_intro .tools {}
+.project .project_intro .tools h1 {}
+.project .project_intro .tools .tools_badge img {}
+.project .project_thumbnail {}
+.project .project_thumbnail .link {}
+.project .project_thumbnail .link a {}
+
+/* project1 - toun28 */
+.project1 .project_intro .title {}
+.project1 .project_intro .title .type {}
+.project1 .project_intro .title .type .main_title {}
+.project1 .project_intro .title .type .main_title .brand {}
+.project1 .project_intro .title .type .main_title .desktop {}
+.project1 .project_intro .title .type .main_title .movile {}
+.project1 .project_intro .title .type .ko_title {}
+.project1 .project_intro .title .type .en_title {}
+.project1 .project_intro .title .type .en_title {}
+.project1 .project_intro .title .type .responsive {}
+.project1 .project_intro dl {}
+.project1 .project_intro dl dt {}
+.project1 .project_intro dl dd {}
+.project1 .project_intro .tools {}
+.project1 .project_intro .tools h1 {}
+.project1 .project_intro .tools .tools_badge img {}
+.project1 .project_thumbnail {}
+.project1 .project_thumbnail .link {}
+.project1 .project_thumbnail .link a {}
+
+/* project2 - cubee */
+.project2 .project_intro .title {}
+.project2 .project_intro .title .type {}
+.project2 .project_intro .title .type .main_title {}
+.project2 .project_intro .title .type .main_title .brand {}
+.project2 .project_intro .title .type .main_title .desktop {}
+.project2 .project_intro .title .type .main_title .movile {}
+.project2 .project_intro .title .type .ko_title {}
+.project2 .project_intro .title .type .en_title {}
+.project2 .project_intro .title .type .en_title {}
+.project2 .project_intro .title .type .responsive {}
+.project2 .project_intro dl {}
+.project2 .project_intro dl dt {}
+.project2 .project_intro dl dd {}
+.project2 .project_intro .tools {}
+.project2 .project_intro .tools h1 {}
+.project2 .project_intro .tools .tools_badge img {}
+.project2 .project_thumbnail {}
+.project2 .project_thumbnail .link {}
+.project2 .project_thumbnail .link a {}
+
+.project3 {}
+.project3 .title {}
+.project3 .title p {}
+.project3 .title img {}
+.project3 .swiper {}
+.project3 .swiper .swiper-wrapper {}
+.project3 .swiper .swiper-wrapper .swiper-slide {}
+.project3 .swiper .swiper-wrapper .swiper-slide .thumbnail {}
+.project3 .swiper .swiper-wrapper .swiper-slide .thumbnail img {}
+.project3 .graphic_siwper {}
+.project3 .graphic_siwper .swiper-wrapper {}
+.project3 .graphic_siwper .swiper-wrapper .slide1 {}
+.project3 .graphic_siwper .swiper-wrapper .slide2 {}
+.project3 .graphic_siwper .swiper-wrapper .slide3 {}
+.project3 .graphic_siwper .swiper-wrapper .slide4 {}
+.project3 .graphic_siwper .swiper-wrapper .slide5 {}
+.project3 .graphic_siwper .swiper-wrapper .slide6 {}
+.project3 .graphic_siwper .swiper-wrapper .slide7 {}
+.project3 .scroll {}
+.project3 .graphic_popup_bg {}
+.project3 .graphic_popup_bg .graphic_contents {}
+.project3 .graphic_popup_bg .graphic_contents .popup_img {}
+.project3 .graphic_popup_bg .graphic_contents .popup_img img {}
+.project3 .graphic_popup_bg .graphic_contents .popup_info {}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title {}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title h1 {}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .info {}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .info .period {}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .info .photoshop {}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .info .illustration {}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .plan {}
+.project4 {}
+.project4 .project_intro {}
+.project4 .project_intro .title {}
+.project4 .project_intro .title {}
+.project4 .project_intro .title .type {}
+.project4 .project_intro .title .type .main_title {}
+.project4 .project_intro .title .type .main_title .brand {}
+.project4 .project_intro .title .type .main_title .movile {}
+.project4 .project_intro .title .ko_title {}
+.project4 .project_intro .title .en_title {}
+.project4 .project_intro .title .responsive {}
+.project4 .project_intro dl {}
+.project4 .project_intro dl dt {}
+.project4 .project_intro .tools {}
+.project4 .project_intro .tools h1 {}
+.project4 .project_intro .tools .tools_badge {}
+.project4 .project_intro .tools .tools_badge img {}
+.project4 .project_thumbnail {}
+.project4 .project_thumbnail .link {}
+.project4 .project_thumbnail .link a {}
+.project5 {}
+.project5 .project_intro {}
+.project5 .project_intro .title {}
+.project5 .project_intro .title .type {}
+.project5 .project_intro .title .main_title {}
+.project5 .project_intro .title .main_title .brand {}
+.project5 .project_intro .title .main_title .movile {}
+.project5 .project_intro .title .ko_title {}
+.project5 .project_intro .title .en_title {}
+.project5 .project_intro .title .responsive {}
+.project5 .project_intro dl {}
+.project5 .project_intro dl dt {}
+.project5 .project_intro dl dd {}
+.project5 .project_intro .tools {}
+.project5 .project_intro .tools h1 {}
+.project5 .project_intro .tools .tools_badge {}
+.project5 .project_intro .tools .tools_badge img {}
+.project5 .project_thumbnail {}
+.project5 .project_thumbnail .link {}
+.project5 .project_thumbnail .link a {}
+.project6 {}
+.project6 .project_intro {}
+.project6 .project_intro .title {}
+.project6 .project_intro .title .type {}
+.project6 .project_intro .title .main_title {}
+.project6 .project_intro .title .main_title .brand {}
+.project6 .project_intro .title .main_title .movile {}
+.project6 .project_intro .ko_title {}
+.project6 .project_intro .en_title {}
+.project6 .project_intro .responsive {}
+.project6 .project_intro dl {}
+.project6 .project_intro dl dt {}
+.project6 .project_intro dl dd {}
+.project6 .project_intro .tools {}
+.project6 .project_intro .tools h1 {}
+.project6 .project_intro .tools .project_thumbnail {}
+.project6 .project_intro .tools .project_thumbnail img {}
+.project6 .project_thumbnail {}
+.project6 .project_thumbnail .link {}
+.project6 .project_thumbnail .link a {}
+.project7 {}
+.project7 .view_text {}
+.project7 .view_text > p {}
+.project7 .view_text .veiw {}
+.project7 .view_text .veiw p {}
+.project7 .view_text .veiw img {}
+.project7 .swiper {}
+.project7 .swiper .swiper-wrapper {}
+.project7 .swiper .swiper-wrapper .swiper-slide {}
+.project7 .swiper .swiper-wrapper .swiper-slide a {}
+.project7 .swiper .swiper-wrapper .swiper-slide .thumbnail {}
+.project7 .swiper .swiper-wrapper .swiper-slide .thumbnail img {}
+.project7 .swiper .swiper-wrapper .swiper-slide .title {}
+.project7 .swiper .swiper-wrapper .swiper-slide .title h1 {}
+.project7 .swiper .swiper-wrapper .swiper-slide .title .tools {}
+.project7 .swiper .swiper-wrapper .swiper-slide .title .tools span {}
+.project7 .swiper .swiper-wrapper .swiper-slide .title .tools .period {}
+.project7 .swiper .swiper-wrapper .swiper-slide .title .tools .prize {}
+.project7 .swiper .swiper-wrapper .swiper-slide .title .tools .premier {}
+.project7 .swiper .swiper-wrapper .swiper-slide .title .tools .effect {}
+.project7 .swiper .swiper-wrapper .swiper-slide .title .plan {}
