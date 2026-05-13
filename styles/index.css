@@ -10,7 +10,8 @@
 }
 @font-face{
   font-family: 'Paperlogy';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+  font-weight: 400;
 }
 /* -------------------------------------------------------------------------------------------------- 1. intro 시작 */
 body {}
@@ -42,14 +43,15 @@ header #gnb li a {
   color: #aaa; border-top: 1px solid #aaa;
   background: #fff;
 }
-header #gnb li:nth-child(1) {z-index: 999;}
-header #gnb li:nth-child(2) {z-index: 998;}
-header #gnb li:nth-child(3) {z-index: 997;}
+header #gnb li:nth-child(1) {z-index: 3;}
+header #gnb li:nth-child(2) {z-index: 2;}
+header #gnb li:nth-child(3) {z-index: 1;}
+
 /* gnb 탭이 active 됐을 때 */
-header #gnb .active {bottom: -20px;; z-index: 999;}
-header #gnb .active::before {left: 0; background-image: url(../images/gnb_active.svg);}
-header #gnb .active::after {right: 0; background-image: url(../images/gnb_active.svg); transform: scaleX(-1);}
-header #gnb .active a {border-top: 1px solid #222; color: #222;}
+header #gnb li.active {bottom: -20px; z-index: 999;}
+header #gnb li.active::before {left: 0; background-image: url(../images/gnb_active.svg);}
+header #gnb li.active::after {right: 0; background-image: url(../images/gnb_active.svg); transform: scaleX(-1);}
+header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 
 /* ----------------------------------------------------------------------------------------------------- */
 .container, 
@@ -59,14 +61,14 @@ header #gnb .active a {border-top: 1px solid #222; color: #222;}
 }
 #intro {}
 #intro .intro_wrap {text-align: center; padding: 35vh;}
-#intro .intro_wrap h1 {font-size: 7.50rem; font-family: 'Paperlogy'; margin-bottom: 40px; color: #333;}
+#intro .intro_wrap h1 {font-size: 7.50rem; font-family: 'Paperlogy'; font-weight: 700; margin-bottom: 40px; color: #333;}
 #intro .intro_wrap .me {display: flex; justify-content: center; align-items: center; gap: 8px;}
 #intro .intro_wrap .me p {font-family: 'DejaVuSansMono'; font-size: 1.13rem; color: #555;}
 #intro .intro_wrap .me span {width: 70px; height: 1px; background: #ddd;}
 #profile {
-  display: flex; 
+  display: flex;  justify-content: space-between;
   width: 1440px; height: 100%;  margin:  0 auto; 
-  padding-top: 120px; background: yellow;
+  padding-top: 120px;
 }
 #profile .introduction {
   display: flex; flex-flow: column nowrap; justify-content: space-between;
@@ -81,53 +83,99 @@ header #gnb .active a {border-top: 1px solid #222; color: #222;}
 }
 #profile .introduction .photo img {width: 100%;}
 
-#profile .my_info {}
+#profile .my_info {
+  display: grid;
+    grid-template-areas: 
+    'information education' 
+    'career experience'
+    'certificate certificate'
+    'skills skills';
+  grid-template-columns: 0.5fr 1fr;
+  grid-gap: 20px 40px;
+}
 #profile .my_info .info {}
 #profile .my_info .info > * {font-size: 0.88rem; line-height: 2;}
 #profile .my_info .info h1 {font-family: 'DejaVuSansMono'; color: #aaa;}
+#profile .my_info .info p span {font-size: 0.75rem;}
 #profile .my_info .info p {color: #555;}
 #profile .my_info .info a {color: #555;}
-#profile .my_info .info span {color: #555; padding-bottom: 2px; border-bottom: 1px solid #aaa;}
-
-#profile .my_info .information {}
+#profile .my_info .info > span {color: #555; padding-bottom: 2px; border-bottom: 1px solid #aaa;}
+/* information */
+#profile .my_info .information {grid-area: information;}
 #profile .my_info .information h1 {}
 #profile .my_info .information p {}
 #profile .my_info .information a {}
-#profile .my_info .career {}
+/* career */
+#profile .my_info .career {grid-area: career;}
 #profile .my_info .career h1 {}
 #profile .my_info .career p {}
-#profile .my_info .certificate {}
+/* certificate */
+#profile .my_info .certificate {grid-area: certificate;}
 #profile .my_info .certificate h1 {}
 #profile .my_info .certificate p {}
-#profile .my_info .education {}
+/* experience */
+#profile .my_info .education {grid-area: education;}
 #profile .my_info .education h1 {}
 #profile .my_info .education p {}
-#profile .my_info .experience {}
+/* experience */
+#profile .my_info .experience {grid-area: experience;}
 #profile .my_info .experience h1 {}
 #profile .my_info .experience p {}
-#profile .my_info .my_skills {}
-#profile .my_info .my_skills img {}
-.project_wrap {}
-.project_wrap .view {}
-.project_wrap .view p {}
-.project_wrap .view img {}
+/* skills */
+#profile .my_info .my_skills {grid-area: skills;  width: 830px;}
+#profile .my_info .my_skills h1 {}
+#profile .my_info .my_skills .skill_img {display: flex; flex-flow: row wrap; gap: 10px; padding: 10px 0 80px;}
+#profile .my_info .my_skills .skill_img img {width: 120px; border-radius: 10px;}
+/* --------------------------------------------------------------------------------------------------------- 3.project1 */
+.project_wrap {margin-top: 80px;}
+.project_wrap .view {display: flex; align-items: center; justify-content: center; margin-bottom: 40px;}
+.project_wrap .view p {font-size: 0.88rem; color: #555;}
+.project_wrap .view img {width: 32px;}
 .project_wrap .swiper {}
 .project_wrap .swiper .swiper-wrapper {}
-.project_wrap .swiper .swiper-wrapper .swiper-slide {}
+.project_wrap .swiper .swiper-wrapper .swiper-slide { }
 .project_wrap .swiper .swiper-wrapper .swiper-slide a {}
 .project_wrap .swiper .swiper-wrapper .swiper-slide a h1 {}
 .project_wrap .swiper .swiper-wrapper .swiper-slide a p {}
 .project_wrap .swiper .swiper-wrapper .swiper-slide a p span {}
-.project_wrap .project_swiper {}
-.project_wrap .project_swiper .swiper-slide {}
-.project_wrap .project_swiper .swiper-slide .slide1 {}
-.project_wrap .project_swiper .swiper-slide .slide2 {}
-.project_wrap .project_swiper .swiper-slide .slide3 {}
-.project_wrap .project_swiper .swiper-slide .slide4 {}
-.project_wrap .project_swiper .swiper-slide .slide5 {}
-.project_wrap .project_swiper .swiper-slide .slide6 {}
-.project_wrap .project_swiper .swiper-slide .slide7 {}
-.project_wrap .scroll {}
+.project_wrap .project_swiper {margin: 0 120px; border-radius: 20px;}
+.project_wrap .project_swiper .swiper-wrapper  {}
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide {height: 600px; text-align: center;}
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide a {
+  display: block; width: 100%; height: 100%; 
+  background-size: cover; background-repeat: no-repeat;
+}
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide {}
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide a {padding-top: 60px;border-radius: 20px; transition: background-image 0.5s;}
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide a h1 {font-family: 'Paperlogy'; font-weight: 500; font-size: 1.25rem; letter-spacing: 0; color: #fff; margin-bottom: 10px;}
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide a p,
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide a p span {font-size: 0.75rem; font-weight: 300; color: #fff;}
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide a p {}
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide a p span {}
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide:nth-child(1) a p span::before,
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide:nth-child(2) a p span::before {display: none;}
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide a p span::before,
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide a p span::after {
+  content: ''; display: inline-block; 
+  width: 1px; height: 8px; margin: 0 8px;
+  
+  background: #fff;
+}
+
+.project_wrap .project_swiper .swiper-wrapper .slide1 a {background-image: url(../images/project_001.jpg);}
+.project_wrap .project_swiper .swiper-wrapper .slide2 a {background-image: url(../images/project_002.jpg);}
+.project_wrap .project_swiper .swiper-wrapper .slide3 a {background-image: url(../images/project_003.jpg);}
+.project_wrap .project_swiper .swiper-wrapper .slide4 a {background-image: url(../images/project_004.jpg);}
+.project_wrap .project_swiper .swiper-wrapper .slide5 a {background-image: url(../images/project_005.jpg);}
+.project_wrap .project_swiper .swiper-wrapper .slide1:hover a {background-image: url(../images/project_hover_001.jpg);}
+.project_wrap .project_swiper .swiper-wrapper .slide2:hover a {background-image: url(../images/project_hover_002.jpg);}
+.project_wrap .project_swiper .swiper-wrapper .slide3:hover a {background-image: url(../images/project_hover_003.jpg);}
+.project_wrap .project_swiper .swiper-wrapper .slide4:hover a {background-image: url(../images/project_hover_004.jpg);}
+.project_wrap .project_swiper .swiper-wrapper .slide5:hover a {background-image: url(../images/project_hover_005.jpg);}
+
+.project_wrap .scroll {position: relative; width: 1300px; height: 2px; left: 50%; transform: translateX(-50%); bottom: -40px;}
+.project_wrap .scroll .swiper-scrollbar-drag {background:#aaa ;}
+
 
 /* 공통 프로젝트 */
 .project {}

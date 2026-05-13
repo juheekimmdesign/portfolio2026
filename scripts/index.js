@@ -6,4 +6,17 @@
  * All functions are for demonstration purposes only.
  */
  
- 
+const projectAll = document.querySelector('.project_wrap .project_swiper');
+console.log(projectAll);
+
+const projectAllSwiper = new Swiper(projectAll,{
+    slidesPerView:4.5,
+    spaceBetween:20,
+    scrollbar:{
+        el:'.project_wrap .scroll'
+    },
+    autoplay:{
+        delay:3000,
+    },
+    speed: 3000,
+})
