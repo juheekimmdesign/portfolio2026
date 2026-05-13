@@ -66,7 +66,7 @@ header #gnb .active a {border-top: 1px solid #222; color: #222;}
 #profile {
   display: flex; 
   width: 1440px; height: 100%;  margin:  0 auto; 
-  background: yellow; padding-top: 120px;
+  padding-top: 120px; background: yellow;
 }
 #profile .introduction {
   display: flex; flex-flow: column nowrap; justify-content: space-between;
@@ -80,11 +80,15 @@ header #gnb .active a {border-top: 1px solid #222; color: #222;}
   width: 300px; height: 300px;
 }
 #profile .introduction .photo img {width: 100%;}
+
 #profile .my_info {}
-#profile .my_info .info{}
-#profile .my_info .info h1 {}
-#profile .my_info .info p {}
-#profile .my_info .info a {}
+#profile .my_info .info {}
+#profile .my_info .info > * {font-size: 0.88rem; line-height: 2;}
+#profile .my_info .info h1 {font-family: 'DejaVuSansMono'; color: #aaa;}
+#profile .my_info .info p {color: #555;}
+#profile .my_info .info a {color: #555;}
+#profile .my_info .info span {color: #555; padding-bottom: 2px; border-bottom: 1px solid #aaa;}
+
 #profile .my_info .information {}
 #profile .my_info .information h1 {}
 #profile .my_info .information p {}
