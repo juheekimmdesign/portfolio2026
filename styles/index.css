@@ -100,7 +100,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 #profile .my_info .info p span {font-size: 0.75rem;}
 #profile .my_info .info p {color: #555;}
 #profile .my_info .info a {color: #555;}
-#profile .my_info .info > span {color: #555; padding-bottom: 2px; border-bottom: 1px solid #aaa;}
+#profile .my_info .info .github span {color: #555; padding-bottom: 2px; border-bottom: 1px solid #aaa;}
 /* information */
 #profile .my_info .information {grid-area: information;}
 #profile .my_info .information h1 {}
@@ -127,11 +127,19 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 #profile .my_info .my_skills h1 {}
 #profile .my_info .my_skills .skill_img {display: flex; flex-flow: row wrap; gap: 10px; padding: 10px 0 80px;}
 #profile .my_info .my_skills .skill_img img {width: 120px; border-radius: 10px;}
-/* --------------------------------------------------------------------------------------------------------- 3.project1 */
-.project_wrap {margin-top: 80px;}
-.project_wrap .view {display: flex; align-items: center; justify-content: center; margin-bottom: 40px;}
-.project_wrap .view p {font-size: 0.88rem; color: #555;}
-.project_wrap .view img {width: 32px;}
+
+/* ------------------------------------------ 프로필 & 그래픽디자인 & 영상디자인 페이지 공통 */
+.container {}
+.container .title { text-align: center;  margin: 80px 0 40px;}
+.container .title > p {font-family: 'DejaVuSansMono';font-size: 0.88rem; color: #aaa;}
+.container .view {display: flex; align-items: center; justify-content: center;}
+.container .view p {font-size: 0.88rem; color: #555;}
+.container .view img {width: 32px;}
+/* --------------------------------------------------------------------------------------------------------- 3.project index */
+.project_wrap {}
+.project_wrap .view {}
+.project_wrap .view p {}
+.project_wrap .view img {}
 .project_wrap .swiper {}
 .project_wrap .swiper .swiper-wrapper {}
 .project_wrap .swiper .swiper-wrapper .swiper-slide { }
@@ -179,7 +187,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 
 
 /* -------------------------------------------------------------------------------------------------------------------- 공통 프로젝트 디자인*/
-.project { display: flex; align-items: end; justify-content: end ; gap: 100px;}
+.project {display: flex; align-items: end; justify-content: end ; gap: 100px;}
 .project .project_intro {width: 500px; height: 100%; padding-top: 120px;}
 .project .project_intro .title {margin-bottom: 40px;}
 .project .project_intro .title > * {margin-bottom: 10px;}
@@ -201,17 +209,25 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project .project_intro .tools .tools_badge img {width: 110px; border-radius: 8px;}
 .project .project_thumbnail {position: relative; width: 1200px; height: 700px; background-size: cover; border-radius: 80px 0 0 0 ;}
 .project .project_thumbnail .link {
-  position: absolute; right: 120px; top:160px;
+  position: absolute; left: 80px; top:80px;
   display: flex; flex-flow: column nowrap; gap: 10px;
-
 }
-.project .project_thumbnail .link a {
-  display: block; width:100px; height: 60px; 
-  border-radius: 10px; line-height: 20px;
-  background: rgba(255,255,255,0.8); color: #555;
+.project .project_thumbnail .link p {
   font-size: 0.75rem; text-align: center;
+  letter-spacing: 0;
+  color: #fff;
 }
-
+.project .project_thumbnail .link a  {
+  display: flex; flex-flow: column nowrap; 
+  align-items: center; justify-content: center;
+  width:100px; height: 60px; 
+  border-radius: 10px; 
+  background: rgba(255,255,255,0.8);
+}
+.project .project_thumbnail .link a span { font-size: 0.75rem; color: #555; }
+/* 링크버튼에 호버했을 때 */
+.project .project_thumbnail .link a:hover {background: rgba(85,85,85,0.8); }
+.project .project_thumbnail .link a:hover span {color: #fff;}
 /* project1 - toun28 */
 .project1 .project_intro .title {}
 .project1 .project_intro .title .type {}
@@ -232,7 +248,6 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project1 .project_thumbnail {background-image: url(../images/thumbnail_001.jpg);}
 .project1 .project_thumbnail .link {}
 .project1 .project_thumbnail .link a {}
-
 /* project2 - cubee */
 .project2 .project_intro .title {}
 .project2 .project_intro .title .type {}
@@ -253,12 +268,12 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project2 .project_thumbnail {background-image: url(../images/thumbnail_002.jpg);}
 .project2 .project_thumbnail .link {}
 .project2 .project_thumbnail .link a {}
-
+/* graphic design */
 .project3 {}
 .project3 .title {}
 .project3 .title p {}
 .project3 .title img {}
-.project3 .swiper {display: none;}
+.project3 .swiper {}
 .project3 .swiper .swiper-wrapper {}
 .project3 .swiper .swiper-wrapper .swiper-slide {}
 .project3 .swiper .swiper-wrapper .swiper-slide .thumbnail {}
@@ -285,6 +300,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .info .photoshop {}
 .project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .info .illustration {}
 .project3 .graphic_popup_bg .graphic_contents .popup_info .plan {}
+/* UXUI app 1 */
 .project4 {}
 .project4 .project_intro {}
 .project4 .project_intro .title {}
@@ -305,6 +321,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project4 .project_thumbnail {background-image: url(../images/thumbnail_004.jpg);}
 .project4 .project_thumbnail .link {}
 .project4 .project_thumbnail .link a {}
+/* UXUI app 2 */
 .project5 {}
 .project5 .project_intro {}
 .project5 .project_intro .title {}
@@ -325,6 +342,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project5 .project_thumbnail {background-image: url(../images/thumbnail_005.jpg);}
 .project5 .project_thumbnail .link {}
 .project5 .project_thumbnail .link a {}
+/* UXUI app 3 */
 .project6 {}
 .project6 .project_intro {}
 .project6 .project_intro .title {}
@@ -345,6 +363,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project6 .project_thumbnail {background-image: url(../images/thumbnail_006.jpg);}
 .project6 .project_thumbnail .link {}
 .project6 .project_thumbnail .link a {}
+/* video */
 .project7 {}
 .project7 .view_text {}
 .project7 .view_text > p {}
