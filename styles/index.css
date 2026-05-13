@@ -12,7 +12,9 @@
   font-family: 'Paperlogy';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
 }
-body {max-width: 1680px;}
+/* -------------------------------------------------------------------------------------------------- 1. intro 시작 */
+body {}
+body > * {min-width: 1680px;}
 header {
   position: fixed; width: 100vw; height: 80px;
   border-bottom: 1px solid #222; background:#fff;
@@ -20,23 +22,36 @@ header {
 header #gnb {
   display: flex; justify-content: end; align-items: end; 
 }
-header #gnb li {}
-header #gnb li a {
-  display: block; width: 228px; height: 60px;
-  background: url(../images/gnb.svg);
-  background-repeat: no-repeat;
-  text-align: center; line-height: 60px;
-  position: absolute;  top: 19px; height: 60px;
-  font-family: 'DejaVuSansMono';
-  color: #aaa;
-  }
-header #gnb li a.active {
-  top: 20px; color: #222;
-  background: url(../images/gnb_active.svg);
+header #gnb li {
+  position: relative; bottom: -19px; right: 80px;
+  margin-left: -50px;
+  width: 230px; height: 60px;
 }
-header #gnb li:nth-child(1) a {right: 370px; z-index: 999; } 
-header #gnb li:nth-child(2) a {right: 200px;z-index: 998;}
-header #gnb li:nth-child(3) a {right: 30px;  z-index: 997;}
+
+header #gnb li::before, header #gnb li::after {
+  width: 65px; height: 100%;
+  content: ''; 
+  position: absolute; top: 0;
+}
+header #gnb li::before {left: 0; background-image: url(../images/gnb.svg);}
+header #gnb li::after {right: 0; background-image: url(../images/gnb.svg); transform: scaleX(-1);}
+header #gnb li a {
+  display: block; width: 100px; height: 100%; margin: 0 65px;
+  text-align: center; line-height: 60px;
+  font-family: 'DejaVuSansMono';
+  color: #aaa; border-top: 1px solid #aaa;
+  background: #fff;
+}
+header #gnb li:nth-child(1) {z-index: 999;}
+header #gnb li:nth-child(2) {z-index: 998;}
+header #gnb li:nth-child(3) {z-index: 997;}
+/* gnb 탭이 active 됐을 때 */
+header #gnb .active {bottom: -20px;; z-index: 999;}
+header #gnb .active::before {left: 0; background-image: url(../images/gnb_active.svg);}
+header #gnb .active::after {right: 0; background-image: url(../images/gnb_active.svg); transform: scaleX(-1);}
+header #gnb .active a {border-top: 1px solid #222; color: #222;}
+
+/* ----------------------------------------------------------------------------------------------------- */
 .container, 
 .project {
   width: 100vw; height: 90vh;
@@ -54,8 +69,7 @@ header #gnb li:nth-child(3) a {right: 30px;  z-index: 997;}
   background: yellow; padding-top: 120px;
 }
 #profile .introduction {
-  display: flex; flex-flow: column nowrap; justify-content: space-between; 
-  
+  display: flex; flex-flow: column nowrap; justify-content: space-between;
 }
 #profile .introduction .text {}
 #profile .introduction .text > * {margin-bottom: 40px;}
@@ -64,7 +78,6 @@ header #gnb li:nth-child(3) a {right: 30px;  z-index: 997;}
 #profile .introduction .text h1+p {font-size: 0.88rem; color: #aaa; line-height: 1.7;}
 #profile .introduction .photo {
   width: 300px; height: 300px;
-  
 }
 #profile .introduction .photo img {width: 100%;}
 #profile .my_info {}
@@ -179,7 +192,7 @@ header #gnb li:nth-child(3) a {right: 30px;  z-index: 997;}
 .project3 {}
 .project3 .title {}
 .project3 .title p {}
-.project3 .title img {}
+.project3 .title img {}/* 사이즈 지우기 */
 .project3 .swiper {}
 .project3 .swiper .swiper-wrapper {}
 .project3 .swiper .swiper-wrapper .swiper-slide {}
