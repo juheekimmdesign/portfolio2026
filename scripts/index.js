@@ -7,10 +7,23 @@
  */
  
 const projectAll = document.querySelector('.project_wrap .project_swiper');
-console.log(projectAll);
+const graphic =document.querySelector('.project3 .graphic_siwper');
+console.log(projectAll, graphic);
 
 const projectAllSwiper = new Swiper(projectAll,{
-    slidesPerView:4.5,
+    slidesPerView:4,
+    spaceBetween:20,
+    scrollbar:{
+        el:'.project_wrap .scroll'
+    },
+    autoplay:{
+        delay:3000,
+    },
+    speed: 3000,
+})
+
+const graphicSwiper = new Swiper(graphic,{
+    slidesPerView:4,
     spaceBetween:20,
     scrollbar:{
         el:'.project_wrap .scroll'

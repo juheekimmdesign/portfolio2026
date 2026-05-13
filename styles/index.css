@@ -155,7 +155,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
   background-size: cover; background-repeat: no-repeat;
 }
 .project_wrap .project_swiper .swiper-wrapper .swiper-slide {}
-.project_wrap .project_swiper .swiper-wrapper .swiper-slide a {padding-top: 60px;border-radius: 20px; transition: background-image 0.5s;}
+.project_wrap .project_swiper .swiper-wrapper .swiper-slide a {padding-top: 60px; border-radius: 20px; transition: background-image 0.5s;}
 .project_wrap .project_swiper .swiper-wrapper .swiper-slide a h1 {font-family: 'Paperlogy'; font-weight: 500; font-size: 1.25rem; letter-spacing: 0; color: #fff; margin-bottom: 10px;}
 .project_wrap .project_swiper .swiper-wrapper .swiper-slide a p,
 .project_wrap .project_swiper .swiper-wrapper .swiper-slide a p span {font-size: 0.75rem; font-weight: 300; color: #fff;}
@@ -277,9 +277,10 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project3 .swiper .swiper-wrapper {}
 .project3 .swiper .swiper-wrapper .swiper-slide {}
 .project3 .swiper .swiper-wrapper .swiper-slide .thumbnail {}
-.project3 .swiper .swiper-wrapper .swiper-slide .thumbnail img {}
-.project3 .graphic_siwper {}
+.project3 .swiper .swiper-wrapper .swiper-slide .thumbnail img {width: 100%; height: 100%;}
+.project3 .graphic_siwper {margin: 0 120px; border-radius: 20px;}
 .project3 .graphic_siwper .swiper-wrapper {}
+.project3 .graphic_siwper .swiper-wrapper .swiper-slide {width: 100%; height: 600px;  overflow-y: hidden; border-radius: 20px;}
 .project3 .graphic_siwper .swiper-wrapper .slide1 {}
 .project3 .graphic_siwper .swiper-wrapper .slide2 {}
 .project3 .graphic_siwper .swiper-wrapper .slide3 {}
