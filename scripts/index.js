@@ -8,7 +8,8 @@
  
 const projectAll = document.querySelector('.project_wrap .project_swiper');
 const graphic =document.querySelector('.project3 .graphic_siwper');
-console.log(projectAll, graphic);
+const video = document.querySelector('.project7 .video_swiper')
+console.log(projectAll, graphic, video);
 
 const projectAllSwiper = new Swiper(projectAll,{
     slidesPerView:4,
@@ -17,19 +18,37 @@ const projectAllSwiper = new Swiper(projectAll,{
         el:'.project_wrap .scroll'
     },
     autoplay:{
-        delay:3000,
+        delay:2000,
     },
-    speed: 3000,
+    speed: 2000,
+    loop:true,
+    pauseOnMouseEnter: true,
 })
 
 const graphicSwiper = new Swiper(graphic,{
     slidesPerView:4,
     spaceBetween:20,
     scrollbar:{
-        el:'.project_wrap .scroll'
+        el:'.project3 .scroll'
     },
     autoplay:{
-        delay:3000,
+        delay:2000,
     },
-    speed: 3000,
+    speed: 2000,
+    loop:true,
+    pauseOnMouseEnter: true,
+})
+
+const videoSwiper = new Swiper(video, {
+    slidesPerView:3,
+    spaceBetween:40,
+    scrollbar:{
+        el:'.project7 .scroll'
+    },
+    autoplay:{
+        delay:2000,
+    },
+    speed: 2000,
+    loop:true,
+    pauseOnMouseEnter: true,
 })

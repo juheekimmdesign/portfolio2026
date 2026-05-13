@@ -13,7 +13,7 @@
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
   font-weight: 400;
 }
-/* -------------------------------------------------------------------------------------------------- 1. intro 시작 */
+/* -------------------------------------------------------------------------------------------------- 1. first page */
 body {}
 body > * {min-width: 1680px;}
 header {
@@ -47,25 +47,24 @@ header #gnb li a {
 header #gnb li:nth-child(1) {z-index: 3;}
 header #gnb li:nth-child(2) {z-index: 2;}
 header #gnb li:nth-child(3) {z-index: 1;}
-
 /* gnb 탭이 active 됐을 때 */
 header #gnb li.active {bottom: -20px; z-index: 999;}
 header #gnb li.active::before {left: 0; background-image: url(../images/gnb_active.svg);}
 header #gnb li.active::after {right: 0; background-image: url(../images/gnb_active.svg); transform: scaleX(-1);}
 header #gnb li.active a {border-top: 1px solid #222; color: #222;}
-
-/* ----------------------------------------------------------------------------------------------------- 2. profile */
+/* ----------------------------------------------------------------------------------------------------- 2. intro& outro  */
 .container, 
 .project {
   width: 100vw; height: 90vh;
   border-bottom: 1px solid #eee;
 }
-#intro {}
-#intro .intro_wrap {text-align: center; padding: 35vh;}
-#intro .intro_wrap h1 {font-size: 7.50rem; font-family: 'Paperlogy'; font-weight: 700; margin-bottom: 40px; color: #333;}
-#intro .intro_wrap .me {display: flex; justify-content: center; align-items: center; gap: 8px;}
-#intro .intro_wrap .me p {font-family: 'DejaVuSansMono'; font-size: 1.13rem; color: #555;}
-#intro .intro_wrap .me span {width: 70px; height: 1px; background: #ddd;}
+#inout {}
+#inout .intro_outro {text-align: center; padding: 35vh;}
+#inout .intro_outro h1 {font-size: 7.50rem; font-family: 'Paperlogy'; font-weight: 700; margin-bottom: 40px; color: #333;}
+#inout .intro_outro .me {display: flex; justify-content: center; align-items: center; gap: 8px;}
+#inout .intro_outro .me p {font-family: 'DejaVuSansMono'; font-size: 1.13rem; color: #555;}
+#inout .intro_outro .me span {width: 70px; height: 1px; background: #ddd;}
+/* --------------------------------------------------------------------------------------------------- 3. profile */
 #profile {
   display: flex;  justify-content: space-between;
   width: 1440px; height: 100%;  margin:  0 auto; 
@@ -198,7 +197,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project .project_intro .title .main_title .movile {width: 20px;}
 .project .project_intro .title .ko_title {color: #191919;}
 .project .project_intro .title .en_title {font-size: 0.63rem; color: #aaa;}
-.project .project_intro .title .responsive {font-size: 0.63rem; color: #aaa; background: #eee; padding: 4px; width: max-content;}
+.project .project_intro .title .responsive {font-size: 0.63rem; color: #aaa; background: #eee; padding: 4px 6px; width: max-content; border-radius: 4px;}
 .project .project_intro dl {}
 .project .project_intro dl dt,
 .project .project_intro .tools h1 {font-family: 'DejaVuSansMono'; font-size: 0.88rem; color: #aaa; margin-bottom: 8px;}
@@ -277,19 +276,27 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project3 .swiper .swiper-wrapper {}
 .project3 .swiper .swiper-wrapper .swiper-slide {}
 .project3 .swiper .swiper-wrapper .swiper-slide .thumbnail {}
-.project3 .swiper .swiper-wrapper .swiper-slide .thumbnail img {width: 100%; height: 100%;}
+.project3 .swiper .swiper-wrapper .swiper-slide .thumbnail img {width: 100%; filter:grayscale(100%)}
 .project3 .graphic_siwper {margin: 0 120px; border-radius: 20px;}
 .project3 .graphic_siwper .swiper-wrapper {}
-.project3 .graphic_siwper .swiper-wrapper .swiper-slide {width: 100%; height: 600px;  overflow-y: hidden; border-radius: 20px;}
+.project3 .graphic_siwper .swiper-wrapper .swiper-slide {width: 100%; height: 600px; overflow: hidden; border-radius: 20px;}
 .project3 .graphic_siwper .swiper-wrapper .slide1 {}
 .project3 .graphic_siwper .swiper-wrapper .slide2 {}
 .project3 .graphic_siwper .swiper-wrapper .slide3 {}
 .project3 .graphic_siwper .swiper-wrapper .slide4 {}
-.project3 .graphic_siwper .swiper-wrapper .slide5 {}
+.project3 .graphic_siwper .swiper-wrapper .slide4 .thumbnail img {width: auto; height: 100%; transform: translateX(-20%);}
+.project3 .graphic_siwper .swiper-wrapper .slide5 {border: 1px solid #eee;}
+.project3 .graphic_siwper .swiper-wrapper .slide6 .thumbnail img {transform: translateY(-42%);}
 .project3 .graphic_siwper .swiper-wrapper .slide6 {}
 .project3 .graphic_siwper .swiper-wrapper .slide7 {}
-.project3 .scroll {}
-.project3 .graphic_popup_bg {}
+.project3 .graphic_siwper .swiper-wrapper .slide7 .thumbnail img {width: auto; height: 100%; transform: translateX(-20%);}
+/* 호버 시에 이미지 변경 */
+.project3 .swiper .swiper-wrapper .swiper-slide .thumbnail:hover img {filter:grayscale(0%); transition: filter 0.5s;}
+/* 스와이퍼 스크롤 */
+.project3 .scroll {position: relative; width: 1300px; height: 2px; left: 50%; transform: translateX(-50%); bottom: -40px; background: #ddd;}
+.project3 .scroll .project_wrap .scroll .swiper-scrollbar-drag {background:#aaa;}
+/* project3 Graphic Design */
+.project3 .graphic_popup_bg {display: none;}
 .project3 .graphic_popup_bg .graphic_contents {}
 .project3 .graphic_popup_bg .graphic_contents .popup_img {}
 .project3 .graphic_popup_bg .graphic_contents .popup_img img {}
@@ -301,6 +308,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .info .photoshop {}
 .project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .info .illustration {}
 .project3 .graphic_popup_bg .graphic_contents .popup_info .plan {}
+
 /* UXUI app 1 */
 .project4 {}
 .project4 .project_intro {}
@@ -367,22 +375,50 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 /* video */
 .project7 {}
 .project7 .view_text {}
-.project7 .view_text > p {}
+.project7 .view_text > p {font-family: 'DejaVuSansMono'; font-size: 0.88rem; color: #222;}
 .project7 .view_text .veiw {}
 .project7 .view_text .veiw p {}
 .project7 .view_text .veiw img {}
-.project7 .swiper {display:  none;}
+.project7 .swiper {}
 .project7 .swiper .swiper-wrapper {}
 .project7 .swiper .swiper-wrapper .swiper-slide {}
 .project7 .swiper .swiper-wrapper .swiper-slide a {}
-.project7 .swiper .swiper-wrapper .swiper-slide .thumbnail {}
-.project7 .swiper .swiper-wrapper .swiper-slide .thumbnail img {}
-.project7 .swiper .swiper-wrapper .swiper-slide .title {}
-.project7 .swiper .swiper-wrapper .swiper-slide .title h1 {}
-.project7 .swiper .swiper-wrapper .swiper-slide .title .tools {}
-.project7 .swiper .swiper-wrapper .swiper-slide .title .tools span {}
-.project7 .swiper .swiper-wrapper .swiper-slide .title .tools .period {}
-.project7 .swiper .swiper-wrapper .swiper-slide .title .tools .prize {}
-.project7 .swiper .swiper-wrapper .swiper-slide .title .tools .premier {}
-.project7 .swiper .swiper-wrapper .swiper-slide .title .tools .effect {}
-.project7 .swiper .swiper-wrapper .swiper-slide .title .plan {}
+.project7 .swiper .swiper-wrapper .swiper-slide .thumbnail {margin-bottom: 20px;}
+.project7 .swiper .swiper-wrapper .swiper-slide .thumbnail img {width: 100%; filter:grayscale(100%); border-radius: 20px;}
+.project7 .swiper .swiper-wrapper .swiper-slide .txt {}
+.project7 .swiper .swiper-wrapper .swiper-slide .txt > * {margin-bottom: 10px; }
+.project7 .swiper .swiper-wrapper .swiper-slide .txt h1 {font-family: 'DejaVuSansMono'; font-size: 0.88rem; color: #222; }
+.project7 .swiper .swiper-wrapper .swiper-slide .txt .tools {}
+.project7 .swiper .swiper-wrapper .swiper-slide .txt .tools span {font-size: 0.63rem; color: #aaa; background: #eee; padding: 4px 6px; width: max-content; border-radius: 4px;}
+.project7 .swiper .swiper-wrapper .swiper-slide .txt .tools .period {}
+.project7 .swiper .swiper-wrapper .swiper-slide .txt .tools .prize {}
+.project7 .swiper .swiper-wrapper .swiper-slide .txt .tools .premier {}
+.project7 .swiper .swiper-wrapper .swiper-slide .txt .tools .effect {margin: 0;}
+.project7 .swiper .swiper-wrapper .swiper-slide .plan {font-size: 0.88rem; line-height: 1.7; color: #aaa;}
+.project7 .video_swiper {margin: 0 120px; border-radius: 20px;}
+.project7 .video_swiper .swiper-wrapper {}
+.project7 .video_swiper .swiper-wrapper .swiper-slide {width: 100%; border-radius: 20px;}
+.project7 .video_swiper .swiper-wrapper .swiper-slide a {}
+.project7 .video_swiper .swiper-wrapper .swiper-slide .thumbnail {}
+.project7 .video_swiper .swiper-wrapper .swiper-slide .thumbnail img {}
+.project7 .video_swiper .swiper-wrapper .swiper-slide .thumbnail:hover img {filter:grayscale(0%); transition: filter 0.5s;}
+.project7 .video_swiper .swiper-wrapper .swiper-slide .txt {}
+.project7 .video_swiper .swiper-wrapper .swiper-slide .txt h1 {}
+.project7 .video_swiper .swiper-wrapper .swiper-slide .txt .tools {}
+.project7 .video_swiper .swiper-wrapper .swiper-slide .txt .tools span {}
+.project7 .video_swiper .swiper-wrapper .swiper-slide .txt .tools .period {}
+.project7 .video_swiper .swiper-wrapper .swiper-slide .txt .tools .prize {}
+.project7 .video_swiper .swiper-wrapper .swiper-slide .txt .tools .premier {}
+.project7 .video_swiper .swiper-wrapper .swiper-slide .txt .tools .effect {}
+.project7 .video_swiper .swiper-wrapper .swiper-slide .plan {}
+.project7 .video_swiper .swiper-wrapper .slide1 {}
+.project7 .video_swiper .swiper-wrapper .slide2 {}
+.project7 .video_swiper .swiper-wrapper .slide3 {}
+.project7 .video_swiper .swiper-wrapper .slide4 {}
+/* 스와이퍼 스크롤 */
+.project7 .scroll {position: relative; width: 1300px; height: 2px; left: 50%; transform: translateX(-50%); bottom: -40px; background: #ddd;}
+.project7 .scroll .project_wrap .scroll .swiper-scrollbar-drag {background:#aaa;}
+/* 팝업되는 이미지 */
+.project7 .video_popup_bg {}
+.project7 .video_popup_bg .video_contents {}
+.project7 .video_popup_bg .video_contents .popup_video {}

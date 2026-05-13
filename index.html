@@ -30,13 +30,13 @@ The similarity to the actual commercial site is purely for design practice.
 <body>
     <header><!-- 고정 -->
         <ul id="gnb">
-            <li class="active"><a href="#">intro</a></li>
-            <li><a href="#">profile</a></li>
-            <li><a href="#">project</a></li>
+            <li class="active"><a href="#intro">intro</a></li>
+            <li><a href="#profile">profile</a></li>
+            <li><a href="#project_index">project</a></li>
         </ul>
     </header>
-    <div id="intro" class="container">
-        <div class="intro_wrap">
+    <div id="inout" class="container">
+        <div class="intro_outro">
             <h1>portfolio</h1>
             <div class="me">
                 <p>## kim ju hee</p>
@@ -111,7 +111,7 @@ The similarity to the actual commercial site is purely for design practice.
             </div>
         </div>
     </div>
-    <div class="project_wrap container">
+    <div class="project_wrap container" id="project_index">
         <div class="title">
             <div class="view">
                 <p>좌우로 스크롤을 해주세요. 이미지를 클릭하면 해당 프로젝트로 이동합니다!</p><img src="./images/scroll_row.png" alt="scroll_row">
@@ -120,31 +120,31 @@ The similarity to the actual commercial site is purely for design practice.
         <div class="swiper project_swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide1">
-                    <a href="#">
+                    <a href="#pro1">
                         <h1>TOUN 28</h1>
                         <p><span>친환경 뷰티 브랜드 톤28</span>웹사이트 리디자인</p>
                     </a>
                 </div>
                 <div class="swiper-slide slide2">
-                    <a href="#">
+                    <a href="#pro2">
                         <h1>CUBEE</h1>
                         <p><span>큐브 엔터테인먼트</span>굿즈몰웹사이트 리디자인</p>
                     </a>
                 </div>
                 <div class="swiper-slide slide3">
-                    <a href="#">
+                    <a href="#pro3">
                         <h1>CONTENTS DESIGN</h1>
                         <p>BANNER<span>DETAIL</span>CONTENTS</p>
                     </a>
                 </div>
                 <div class="swiper-slide slide4">
-                    <a href="#">
+                    <a href="#pro4">
                         <h1>UXUI DESIGN</h1>
                         <p>GHOST IT<span>STARBUCKS</span>UPPUU</p>
                     </a>
                 </div>
                 <div class="swiper-slide slide5">
-                    <a href="#">
+                    <a href="#pro5">
                         <h1>VIDEO DESIGN</h1>
                         <p>APPLE MUSIC<span>STANLEY</span>SHORT FORM</p>
                     </a>
@@ -155,7 +155,7 @@ The similarity to the actual commercial site is purely for design practice.
     </div>
     <!-- 프로젝트 시작 -->
     <!-- 웹디자인 시작 -->
-    <div class=" project project1 ">
+    <div class=" project project1" id="pro1">
         <div class="project_intro">
             <div class="title">
                 <p class="type">## WEB DESIGN</p>
@@ -197,7 +197,7 @@ The similarity to the actual commercial site is purely for design practice.
             </div>
         </div>
     </div>
-    <div class="project project2">
+    <div class="project project2" id="pro2">
         <div class="project_intro">
             <div class="title">
                 <p class="type">## WEB DESIGN</p>
@@ -244,7 +244,7 @@ The similarity to the actual commercial site is purely for design practice.
         </div>
     </div>
     <!-- 그래픽 디자인 시작 -->
-    <div class="project3 container">
+    <div class="project3 container" id="pro3">
         <div class="title">
             <p>## Graphic Design</p>
             <div class="view">
@@ -299,43 +299,7 @@ The similarity to the actual commercial site is purely for design practice.
         </div>
     </div>
     <!--  UXUI 디자인 시작 -->
-    <div class="project project4">
-        <div class="project_intro">
-            <div class="title">
-                <p class="type">## UXUI DESIGN</p>
-                <div class=" main_title">
-                    <h1 class="brand">UPPUU</h1>
-                    <img src="./images/movile.svg" alt="movile" class="movile">
-                </div>
-                <p class="ko_title">스타벅스 APP 개선 디자인</p>
-                <p class="en_title">STARBUCKS APP Redesign</p>
-                <p class="responsive">Mobile</p>
-            </div>
-            <dl>
-                <dt>## plan</dt>
-                <dd>기존 스타벅스앱은 다양한 기능을 제공하고 있음에도 불구하고, 직관적이지 않은 구조와 설명 부족으로 사용자가 기능을 인지하고 활용하기 어려웠습니다. 또한 사용자는 단순한 주문 기능을 넘어, 브랜드 감성과 개인화된 ‘특별한 경험’을 기대하고 있었습니다. 이러한 인사이트를 바탕으로 시크릿 메뉴 추천 기능을 핵심으로 설정하고, 기능 가이드 강화와 주문 상태 피드백, 지갑 기능 개선을 통해 전반적인 사용 흐름을 함께 개선했습니다.</dd>
-                <dt>## period</dt>
-                <dd>2025. 04 ~ 2025. 05</dd>
-                <dt>## Contribution</dt>
-                <dd>개인작업 100%</dd>
-            </dl>
-            <div class="tools">
-                <h1>## Tools</h1>
-                <div class="tools_badge">
-                    <img src="./images/figma.svg" alt="Figma">
-                    <img src="./images/photoshop.svg" alt="Photoshop">
-                    <img src="./images/illustration.svg" alt="Illustration">
-                </div>
-            </div>
-        </div>
-        <div class="project_thumbnail" title="프로젝트 링크 버튼을 클릭해 주세요!">
-            <div class="link">
-                <p>PROJECT LINK</p>
-                <a href="https://www.figma.com/proto/EVsWK8CoU62zLaurYEVx7f/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8---%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4?node-id=18-2&t=NO41YR0Eu5zER1jT-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&hide-ui=1" target="_blank"><span>PROPOSAL</span></a>
-            </div>
-        </div>
-    </div>
-    <div class="project project5">
+    <div class="project project4" id="pro4">
         <div class="project_intro">
             <div class="title">
                 <p class="type">## UXUI DESIGN</p>
@@ -371,6 +335,43 @@ The similarity to the actual commercial site is purely for design practice.
             </div>
         </div>
     </div>
+    <div class="project project5" >
+        <div class="project_intro">
+            <div class="title">
+                <p class="type">## UXUI DESIGN</p>
+                <div class=" main_title">
+                    <h1 class="brand">STARBICKS</h1>
+                    <img src="./images/movile.svg" alt="movile" class="movile">
+                </div>
+                <p class="ko_title">스타벅스 APP 개선 디자인</p>
+                <p class="en_title">STARBUCKS APP Redesign</p>
+                <p class="responsive">Mobile</p>
+            </div>
+            <dl>
+                <dt>## plan</dt>
+                <dd>기존 스타벅스앱은 다양한 기능을 제공하고 있음에도 불구하고, 직관적이지 않은 구조와 설명 부족으로 사용자가 기능을 인지하고 활용하기 어려웠습니다. 또한 사용자는 단순한 주문 기능을 넘어, 브랜드 감성과 개인화된 ‘특별한 경험’을 기대하고 있었습니다. 이러한 인사이트를 바탕으로 시크릿 메뉴 추천 기능을 핵심으로 설정하고, 기능 가이드 강화와 주문 상태 피드백, 지갑 기능 개선을 통해 전반적인 사용 흐름을 함께 개선했습니다.</dd>
+                <dt>## period</dt>
+                <dd>2025. 04 ~ 2025. 05</dd>
+                <dt>## Contribution</dt>
+                <dd>개인작업 100%</dd>
+            </dl>
+            <div class="tools">
+                <h1>## Tools</h1>
+                <div class="tools_badge">
+                    <img src="./images/figma.svg" alt="Figma">
+                    <img src="./images/photoshop.svg" alt="Photoshop">
+                    <img src="./images/illustration.svg" alt="Illustration">
+                </div>
+            </div>
+        </div>
+        <div class="project_thumbnail" title="프로젝트 링크 버튼을 클릭해 주세요!">
+            <div class="link">
+                <p>PROJECT LINK</p>
+                <a href="https://www.figma.com/proto/EVsWK8CoU62zLaurYEVx7f/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8---%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4?node-id=18-2&t=NO41YR0Eu5zER1jT-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&hide-ui=1" target="_blank"><span>PROPOSAL</span></a>
+            </div>
+        </div>
+    </div>
+    
     <div class="project project6">
         <div class="project_intro">
             <div class="title">
@@ -408,7 +409,7 @@ The similarity to the actual commercial site is purely for design practice.
         </div>
     </div>
     <!-- 영상 디자인 시작 -->
-    <div class="project project7 container">
+    <div class="project7 container" id="pro5">
         <div class="title">
             <p>## video Design</p>
             <div class="view">
@@ -421,7 +422,7 @@ The similarity to the actual commercial site is purely for design practice.
                 <div class="swiper-slide slide1">
                     <a href="#">
                         <p class="thumbnail"><img src="./images/video_001.jpg" alt=""></p>
-                        <div class="title">
+                        <div class="txt">
                             <h1>2021 국내산 우유·치즈 9초컷 광고 콘테스트</h1>
                             <div class="tools">
                                 <span class="period">1 week</span>
@@ -429,14 +430,14 @@ The similarity to the actual commercial site is purely for design practice.
                                 <span  class="premier">Premier Pro</span>
                                 <span class="effect">After Effect</span>
                             </div>
-                            <p class="plan">2021 국내산 우유·치즈 9초컷 광고 콘테스트에서 최우수상을 수상한 광고 영상입니다.엄마가 딸에게 전하는 메시지를 나레이션으로 담아 감성적인 분위기를 연출했으며,짧은 러닝타임 안에서도 따뜻한 공감과 브랜드 이미지를 효과적으로 전달할 수 있도록 제작했습니다.</p>
                         </div>
+                        <p class="plan">2021 국내산 우유·치즈 9초컷 광고 콘테스트에서 최우수상을 수상한 광고 영상입니다.엄마가 딸에게 전하는 메시지를 나레이션으로 담아 감성적인 분위기를 연출했으며,짧은 러닝타임 안에서도 따뜻한 공감과 브랜드 이미지를 효과적으로 전달할 수 있도록 제작했습니다.</p>
                     </a>
                 </div>
                 <div class="swiper-slide slide2">
                     <a href="#">
                         <p class="thumbnail"><img src="./images/video_002.jpg" alt=""></p>
-                        <div class="title">
+                        <div class="txt">
                             <h1>Stanley Holiday Collection Promotion Video</h1>
                             <div class="tools">
                                 <span class="period">5 hours</span>
@@ -450,7 +451,7 @@ The similarity to the actual commercial site is purely for design practice.
                 <div class="swiper-slide slide3">
                     <a href="#">
                         <p class="thumbnail"><img src="./images/video_003.jpg" alt=""></p>
-                        <div class="title">
+                        <div class="txt">
                             <h1>Apple Music Promotion Video</h1>
                             <div class="tools"> 
                                 <span class="period">1 week</span>
@@ -464,7 +465,7 @@ The similarity to the actual commercial site is purely for design practice.
                 <div class="swiper-slide slide4">
                     <a href="#">
                         <p class="thumbnail"><img src="./images/video_004.jpg" alt=""></p>
-                        <div class="title">
+                        <div class="txt">
                             <h1>European Bread Intro Motion</h1>
                             <div class="tools"> 
                                 <span class="period">3 hours</span>
@@ -484,12 +485,14 @@ The similarity to the actual commercial site is purely for design practice.
             </div>
         </div>
     </div>
-    <div id="ending">
-        <p>Thank you</p>
-        <div class="me">
-            <p>## kim ju hee</p>
-            <span></span>
-            <p>{ WEB Designer : Publisher }</p>
+    <div id="inout" class="container">
+        <div class="intro_outro">
+            <h1>Thank you</h1>
+            <div class="me">
+                <p>## kim ju hee</p>
+                <span></span>
+                <p>{ WEB Designer : Publisher }</p>
+            </div>
         </div>
     </div>
 </body>
