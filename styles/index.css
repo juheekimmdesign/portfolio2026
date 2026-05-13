@@ -19,6 +19,7 @@ body > * {min-width: 1680px;}
 header {
   position: fixed; width: 100vw; height: 80px;
   border-bottom: 1px solid #222; background:#fff;
+  z-index: 900;
 }
 header #gnb {
   display: flex; justify-content: end; align-items: end; 
@@ -53,7 +54,7 @@ header #gnb li.active::before {left: 0; background-image: url(../images/gnb_acti
 header #gnb li.active::after {right: 0; background-image: url(../images/gnb_active.svg); transform: scaleX(-1);}
 header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 
-/* ----------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- 2. profile */
 .container, 
 .project {
   width: 100vw; height: 90vh;
@@ -161,7 +162,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
   
   background: #fff;
 }
-
+/* 마우스 호버시에 이미지 변경 */
 .project_wrap .project_swiper .swiper-wrapper .slide1 a {background-image: url(../images/project_001.jpg);}
 .project_wrap .project_swiper .swiper-wrapper .slide2 a {background-image: url(../images/project_002.jpg);}
 .project_wrap .project_swiper .swiper-wrapper .slide3 a {background-image: url(../images/project_003.jpg);}
@@ -172,80 +173,92 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project_wrap .project_swiper .swiper-wrapper .slide3:hover a {background-image: url(../images/project_hover_003.jpg);}
 .project_wrap .project_swiper .swiper-wrapper .slide4:hover a {background-image: url(../images/project_hover_004.jpg);}
 .project_wrap .project_swiper .swiper-wrapper .slide5:hover a {background-image: url(../images/project_hover_005.jpg);}
+/* 스와이퍼 스크롤 */
+.project_wrap .scroll {position: relative; width: 1300px; height: 2px; left: 50%; transform: translateX(-50%); bottom: -40px; background: #ddd;}
+.project_wrap .scroll .swiper-scrollbar-drag {background:#aaa;}
 
-.project_wrap .scroll {position: relative; width: 1300px; height: 2px; left: 50%; transform: translateX(-50%); bottom: -40px;}
-.project_wrap .scroll .swiper-scrollbar-drag {background:#aaa ;}
 
-
-/* 공통 프로젝트 */
-.project {}
-.project .project_intro .title {}
-.project .project_intro .title .type {}
-.project .project_intro .title .type .main_title {}
-.project .project_intro .title .type .main_title .brand {}
-.project .project_intro .title .type .main_title .desktop {}
-.project .project_intro .title .type .main_title .movile {}
-.project .project_intro .title .type .ko_title {}
-.project .project_intro .title .type .en_title {}
-.project .project_intro .title .type .en_title {}
-.project .project_intro .title .type .responsive {}
+/* -------------------------------------------------------------------------------------------------------------------- 공통 프로젝트 디자인*/
+.project { display: flex; align-items: end; justify-content: end ; gap: 100px;}
+.project .project_intro {width: 500px; height: 100%; padding-top: 120px;}
+.project .project_intro .title {margin-bottom: 40px;}
+.project .project_intro .title > * {margin-bottom: 10px;}
+.project .project_intro .title .type {font-family: 'DejaVuSansMono'; font-size: 0.88rem; color: #aaa; margin-bottom: 40px;}
+.project .project_intro .title .main_title {display: flex; gap: 8px;}
+.project .project_intro .title .main_title .brand {font-family: 'Paperlogy'; font-size: 2rem; font-weight: 600;}
+.project .project_intro .title .main_title .desktop {width: 20px;}
+.project .project_intro .title .main_title .movile {width: 20px;}
+.project .project_intro .title .ko_title {color: #191919;}
+.project .project_intro .title .en_title {font-size: 0.63rem; color: #aaa;}
+.project .project_intro .title .responsive {font-size: 0.63rem; color: #aaa; background: #eee; padding: 4px; width: max-content;}
 .project .project_intro dl {}
-.project .project_intro dl dt {}
-.project .project_intro dl dd {}
+.project .project_intro dl dt,
+.project .project_intro .tools h1 {font-family: 'DejaVuSansMono'; font-size: 0.88rem; color: #aaa; margin-bottom: 8px;}
+.project .project_intro dl dd {font-size: 0.88rem; line-height: 1.7; color: #555; margin-bottom: 30px; }
 .project .project_intro .tools {}
-.project .project_intro .tools h1 {}
-.project .project_intro .tools .tools_badge img {}
-.project .project_thumbnail {}
-.project .project_thumbnail .link {}
-.project .project_thumbnail .link a {}
+.project .project_intro .tools h1 {margin-bottom: 10px;}
+.project .project_intro .tools .tools_badge {display: flex; flex-flow: row wrap; gap: 8px;}
+.project .project_intro .tools .tools_badge img {width: 110px; border-radius: 8px;}
+.project .project_thumbnail {position: relative; width: 1200px; height: 700px; background-size: cover; border-radius: 80px 0 0 0 ;}
+.project .project_thumbnail .link {
+  position: absolute; right: 120px; top:160px;
+  display: flex; flex-flow: column nowrap; gap: 10px;
+
+}
+.project .project_thumbnail .link a {
+  display: block; width:100px; height: 60px; 
+  border-radius: 10px; line-height: 20px;
+  background: rgba(255,255,255,0.8); color: #555;
+  font-size: 0.75rem; text-align: center;
+}
 
 /* project1 - toun28 */
 .project1 .project_intro .title {}
 .project1 .project_intro .title .type {}
-.project1 .project_intro .title .type .main_title {}
-.project1 .project_intro .title .type .main_title .brand {}
-.project1 .project_intro .title .type .main_title .desktop {}
-.project1 .project_intro .title .type .main_title .movile {}
-.project1 .project_intro .title .type .ko_title {}
-.project1 .project_intro .title .type .en_title {}
-.project1 .project_intro .title .type .en_title {}
-.project1 .project_intro .title .type .responsive {}
+.project1 .project_intro .titl  .main_title {}
+.project1 .project_intro .title .main_title .brand {}
+.project1 .project_intro .title .main_title .desktop {}
+.project1 .project_intro .title .main_title .movile {}
+.project1 .project_intro .title .ko_title {}
+.project1 .project_intro .title .en_title {}
+.project1 .project_intro .title .en_title {}
+.project1 .project_intro .title .responsive {}
 .project1 .project_intro dl {}
 .project1 .project_intro dl dt {}
 .project1 .project_intro dl dd {}
 .project1 .project_intro .tools {}
 .project1 .project_intro .tools h1 {}
 .project1 .project_intro .tools .tools_badge img {}
-.project1 .project_thumbnail {}
+.project1 .project_thumbnail {background-image: url(../images/thumbnail_001.jpg);}
 .project1 .project_thumbnail .link {}
 .project1 .project_thumbnail .link a {}
 
 /* project2 - cubee */
 .project2 .project_intro .title {}
 .project2 .project_intro .title .type {}
-.project2 .project_intro .title .type .main_title {}
-.project2 .project_intro .title .type .main_title .brand {}
-.project2 .project_intro .title .type .main_title .desktop {}
-.project2 .project_intro .title .type .main_title .movile {}
-.project2 .project_intro .title .type .ko_title {}
-.project2 .project_intro .title .type .en_title {}
-.project2 .project_intro .title .type .en_title {}
-.project2 .project_intro .title .type .responsive {}
+.project2 .project_intro .title .main_title {}
+.project2 .project_intro .title .main_title .brand {}
+.project2 .project_intro .title .main_title .desktop {}
+.project2 .project_intro .title .main_title .movile {}
+.project2 .project_intro .title .ko_title {}
+.project2 .project_intro .title .en_title {}
+.project2 .project_intro .title .en_title {}
+.project2 .project_intro .title .responsive {}
 .project2 .project_intro dl {}
 .project2 .project_intro dl dt {}
 .project2 .project_intro dl dd {}
 .project2 .project_intro .tools {}
 .project2 .project_intro .tools h1 {}
 .project2 .project_intro .tools .tools_badge img {}
-.project2 .project_thumbnail {}
+.project2 .project_thumbnail {background-image: url(../images/thumbnail_002.jpg);}
 .project2 .project_thumbnail .link {}
 .project2 .project_thumbnail .link a {}
 
 .project3 {}
 .project3 .title {}
 .project3 .title p {}
-.project3 .title img {}/* 사이즈 지우기 */
-.project3 .swiper {}
+.project3 .title img {}
+.project3 .swiper {display: none;}
 .project3 .swiper .swiper-wrapper {}
 .project3 .swiper .swiper-wrapper .swiper-slide {}
 .project3 .swiper .swiper-wrapper .swiper-slide .thumbnail {}
@@ -277,9 +290,9 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project4 .project_intro .title {}
 .project4 .project_intro .title {}
 .project4 .project_intro .title .type {}
-.project4 .project_intro .title .type .main_title {}
-.project4 .project_intro .title .type .main_title .brand {}
-.project4 .project_intro .title .type .main_title .movile {}
+.project4 .project_intro .title  .main_title {}
+.project4 .project_intro .title  .main_title .brand {}
+.project4 .project_intro .title  .main_title .movile {}
 .project4 .project_intro .title .ko_title {}
 .project4 .project_intro .title .en_title {}
 .project4 .project_intro .title .responsive {}
@@ -289,7 +302,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project4 .project_intro .tools h1 {}
 .project4 .project_intro .tools .tools_badge {}
 .project4 .project_intro .tools .tools_badge img {}
-.project4 .project_thumbnail {}
+.project4 .project_thumbnail {background-image: url(../images/thumbnail_004.jpg);}
 .project4 .project_thumbnail .link {}
 .project4 .project_thumbnail .link a {}
 .project5 {}
@@ -309,7 +322,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project5 .project_intro .tools h1 {}
 .project5 .project_intro .tools .tools_badge {}
 .project5 .project_intro .tools .tools_badge img {}
-.project5 .project_thumbnail {}
+.project5 .project_thumbnail {background-image: url(../images/thumbnail_005.jpg);}
 .project5 .project_thumbnail .link {}
 .project5 .project_thumbnail .link a {}
 .project6 {}
@@ -327,9 +340,9 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project6 .project_intro dl dd {}
 .project6 .project_intro .tools {}
 .project6 .project_intro .tools h1 {}
-.project6 .project_intro .tools .project_thumbnail {}
-.project6 .project_intro .tools .project_thumbnail img {}
-.project6 .project_thumbnail {}
+.project6 .project_intro .tools_badge {}
+.project6 .project_intro .tools_badge img {}
+.project6 .project_thumbnail {background-image: url(../images/thumbnail_006.jpg);}
 .project6 .project_thumbnail .link {}
 .project6 .project_thumbnail .link a {}
 .project7 {}
@@ -338,7 +351,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project7 .view_text .veiw {}
 .project7 .view_text .veiw p {}
 .project7 .view_text .veiw img {}
-.project7 .swiper {}
+.project7 .swiper {display:  none;}
 .project7 .swiper .swiper-wrapper {}
 .project7 .swiper .swiper-wrapper .swiper-slide {}
 .project7 .swiper .swiper-wrapper .swiper-slide a {}
