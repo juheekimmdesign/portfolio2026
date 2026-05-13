@@ -130,7 +130,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 /* ------------------------------------------ 프로필 & 그래픽디자인 & 영상디자인 페이지 공통 */
 .container {}
 .container .title { text-align: center;  margin: 80px 0 40px;}
-.container .title > p {font-family: 'DejaVuSansMono';font-size: 0.88rem; color: #aaa;}
+.container .title > p {font-family: 'DejaVuSansMono';font-size: 0.88rem; color: #aaa; margin-bottom: 10px;}
 .container .view {display: flex; align-items: center; justify-content: center;}
 .container .view p {font-size: 0.88rem; color: #555;}
 .container .view img {width: 32px;}
@@ -329,6 +329,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project4 .project_intro .tools .tools_badge img {}
 .project4 .project_thumbnail {background-image: url(../images/thumbnail_004.jpg);}
 .project4 .project_thumbnail .link {}
+.project4 .project_thumbnail .link p {color: #888;}
 .project4 .project_thumbnail .link a {}
 /* UXUI app 2 */
 .project5 {}
@@ -350,6 +351,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project5 .project_intro .tools .tools_badge img {}
 .project5 .project_thumbnail {background-image: url(../images/thumbnail_005.jpg);}
 .project5 .project_thumbnail .link {}
+.project5 .project_thumbnail .link p {color: #888;}
 .project5 .project_thumbnail .link a {}
 /* UXUI app 3 */
 .project6 {}
