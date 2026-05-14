@@ -53,6 +53,19 @@ const videoSwiper = new Swiper(video, {
     pauseOnMouseEnter: true,
 })
 
+// GNB active tab 변경
+const gnbTab = document.querySelectorAll('#gnb li');
+
+for(let tab of gnbTab){
+    tab.addEventListener('click', function(){
+        for(let i of gnbTab){
+            i.classList.remove('active');
+        }
+        tab.classList.add('active');
+    });
+}
+
+
 // 그래픽을 클릭했을 때 실행되는 팝업 효과 --------------------------------------------------------------
 const popupBg = document.querySelector('.graphic_popup_bg');
 const popupImg = document.querySelector('.graphic_contents .popup_img img');
@@ -63,7 +76,7 @@ const popupIllustration = document.querySelector('.popup_title .illustration');
 const popupPlan = document.querySelector('.popup_info .plan');
 console.log(popupBg, popupImg, popupTitle, popupPeriod, popupPhotoshop, popupIllustration, popupPlan);
 
-// 클릭했을 때, 들어갈 내용
+// 클릭했을 때, 들어갈 내용 준비
 const graphicData = [{
     src:'./images/graphic_001.jpg', //popupImg.src = grpahicData[0].src;
     title: '## Home Appliance Promotion Banner',
@@ -110,6 +123,8 @@ thumbnail[0].addEventListener('click', function(e){
     e.preventDefault();
     popupBg.style.display = 'block';
     popupImg.src = graphicData[0].src;
+    popupImg.parentElement.style.width = '400px';
+    popupImg.parentElement.style.height = '700px';
     popupTitle.innerHTML =graphicData[0].title;
     popupPeriod.textContent = graphicData[0].tag[0];
     popupPhotoshop.textContent = graphicData[0].tag[1];
@@ -123,6 +138,8 @@ thumbnail[1].addEventListener('click', function(e){
     e.preventDefault();
     popupBg.style.display = 'block'
     popupImg.src = graphicData[1].src;
+    popupImg.parentElement.style.width = '400px';
+    popupImg.parentElement.style.height = '700px';
     popupTitle.innerHTML =graphicData[1].title;
     popupPeriod.textContent = graphicData[1].tag[0];
     popupPhotoshop.textContent = graphicData[1].tag[1];
@@ -136,6 +153,8 @@ thumbnail[2].addEventListener('click', function(e){
     e.preventDefault();
     popupBg.style.display = 'block'
     popupImg.src = graphicData[2].src;
+    popupImg.parentElement.style.width = '400px';
+    popupImg.parentElement.style.height = '700px';
     popupTitle.innerHTML =graphicData[2].title;
     popupPeriod.textContent = graphicData[2].tag[0];
     popupPhotoshop.textContent = graphicData[2].tag[1];
@@ -150,6 +169,8 @@ thumbnail[3].addEventListener('click', function(e){
     popupBg.style.display = 'block'
     popupImg.src = graphicData[3].src;
     popupTitle.innerHTML =graphicData[3].title;
+    popupImg.parentElement.style.width = '600px';
+    popupImg.parentElement.style.height = '620px';
     popupPeriod.textContent = graphicData[3].tag[0];
     popupPhotoshop.textContent = graphicData[3].tag[1];
     popupIllustration.textContent = graphicData[3].tag[2];
@@ -163,6 +184,8 @@ thumbnail[4].addEventListener('click', function(e){
     popupBg.style.display = 'block'
     popupImg.src = graphicData[4].src;
     popupTitle.innerHTML =graphicData[4].title;
+    popupImg.parentElement.style.width = '400px';
+    popupImg.parentElement.style.height = '700px';
     popupPeriod.textContent = graphicData[4].tag[0];
     popupPhotoshop.textContent = graphicData[4].tag[1];
     popupIllustration.textContent = graphicData[4].tag[2];
@@ -176,6 +199,8 @@ thumbnail[5].addEventListener('click', function(e){
     popupBg.style.display = 'block'
     popupImg.src = graphicData[5].src;
     popupTitle.innerHTML =graphicData[5].title;
+    popupImg.parentElement.style.width = '400px';
+    popupImg.parentElement.style.height = '700px';
     popupPeriod.textContent = graphicData[5].tag[0];
     popupPhotoshop.textContent = graphicData[5].tag[1];
     popupIllustration.textContent = graphicData[5].tag[2];
@@ -188,6 +213,8 @@ thumbnail[6].addEventListener('click', function(e){
     e.preventDefault();
     popupBg.style.display = 'block'
     popupImg.src = graphicData[6].src;
+    popupImg.parentElement.style.width = '600px';
+    popupImg.parentElement.style.height = '550px';
     popupTitle.innerHTML =graphicData[6].title;
     popupPeriod.textContent = graphicData[6].tag[0];
     popupPhotoshop.textContent = graphicData[6].tag[1];

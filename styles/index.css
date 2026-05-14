@@ -3,6 +3,7 @@
  이 페이지는 깃허브에서 발생한 피싱 경고 오탐지(False Positive)를 해명하고, 해당 코드가 순수한 학습 및 포트폴리오용임을 증명하기 위해 작성되었습니다.
   This CSS is part of a student project. 
   Any resemblance to real-world commercial sites is purely for design practice.
+  
 */
 @font-face{
   font-family: 'DejaVuSansMono';
@@ -13,8 +14,21 @@
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
   font-weight: 400;
 }
+/* 스크롤 */
+html {scroll-behavior: smooth;} /* 스크롤 애니메이션 효과 */
+/* Firefox */
+html {scrollbar-width: 10px; scrollbar-color: #eee #333;}
+/* Opera */
+html::-o-scrollbar {width: 10px;}
+html::-o-scrollbar-thumb {background-color: #eee;border-radius: 5px;}
+/* Chrome, Safari, Edge 등 웹킷 기반 브라우저 */
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(255, 255, 255, 1);}
+::-webkit-scrollbar-thumb {background-color: #eee; border-radius: 5px;}
+body {background-color: #fff;}
+
 /* -------------------------------------------------------------------------------------------------- 1. first page */
-body {}
+
 body > * {min-width: 1680px;}
 header {
   position: fixed; width: 100vw; height: 80px;
@@ -44,6 +58,7 @@ header #gnb li a {
   color: #aaa; border-top: 1px solid #aaa;
   background: #fff;
 }
+/* gnb 보이는 순서 설정 */
 header #gnb li:nth-child(1) {z-index: 3;}
 header #gnb li:nth-child(2) {z-index: 2;}
 header #gnb li:nth-child(3) {z-index: 1;}
@@ -52,6 +67,8 @@ header #gnb li.active {bottom: -20px; z-index: 999;}
 header #gnb li.active::before {left: 0; background-image: url(../images/gnb_active.svg);}
 header #gnb li.active::after {right: 0; background-image: url(../images/gnb_active.svg); transform: scaleX(-1);}
 header #gnb li.active a {border-top: 1px solid #222; color: #222;}
+/* 호버시에 GNB 글자에 컬러변경 */
+header #gnb li:hover a {color: #222;}
 /* ----------------------------------------------------------------------------------------------------- 2. intro& outro  */
 .container, 
 .project {
@@ -302,7 +319,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
   display: none;
   }
 .project3 .graphic_popup_bg .graphic_contents {height: 100%; display: flex; align-items: center; justify-content: center; gap: 40px;}
-.project3 .graphic_popup_bg .graphic_contents .popup_img {width: 400px; height: 700px; overflow: auto;}
+.project3 .graphic_popup_bg .graphic_contents .popup_img {width: 400px; height: 700px; overflow: auto; }
 .project3 .graphic_popup_bg .graphic_contents .popup_img img {width: 100%; background-size: cover; background-repeat: no-repeat;}
 .project3 .graphic_popup_bg .graphic_contents .popup_info {}
 .project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title {margin-bottom: 10px;}
