@@ -75,12 +75,12 @@ header #gnb li:hover a {color: #222;}
   width: 100vw; height: 90vh;
   border-bottom: 1px solid #eee;
 }
-#inout {}
-#inout .intro_outro {text-align: center; padding: 35vh;}
-#inout .intro_outro h1 {font-size: 7.50rem; font-family: 'Paperlogy'; font-weight: 700; margin-bottom: 40px; color: #333;}
-#inout .intro_outro .me {display: flex; justify-content: center; align-items: center; gap: 8px;}
-#inout .intro_outro .me p {font-family: 'DejaVuSansMono'; font-size: 1.13rem; color: #555;}
-#inout .intro_outro .me span {width: 70px; height: 1px; background: #ddd;}
+.in_out {}
+.in_out .intro_outro {text-align: center; padding: 35vh;}
+.in_out .intro_outro h1 {font-size: 7.50rem; font-family: 'Paperlogy'; font-weight: 700; margin-bottom: 40px; color: #333;}
+.in_out .intro_outro .me {display: flex; justify-content: center; align-items: center; gap: 8px;}
+.in_out .intro_outro .me p {font-family: 'DejaVuSansMono'; font-size: 1.13rem; color: #555;}
+.in_out .intro_outro .me span {width: 70px; height: 1px; background: #ddd;}
 /* --------------------------------------------------------------------------------------------------- 3. profile */
 #profile {
   display: flex;  justify-content: space-between;
