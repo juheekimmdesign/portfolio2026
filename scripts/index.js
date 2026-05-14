@@ -114,13 +114,15 @@ const graphicData = [{
     contents:'실무 중심 강좌를 주제로 제작한 인터넷 강의 홍보 디자인입니다.핵심 내용을 직관적으로 전달할 수 있도록 구성했으며,신뢰감 있는 레이아웃과 깔끔한 디자인을 중심으로 작업했습니다.',
 }]
 
-// 클릭할 대상 선택
+// 대상 선택
 const thumbnail = document.querySelectorAll('.graphic_siwper .swiper-wrapper .swiper-slide');
-console.log(thumbnail[0]);
+const body = document.querySelector('body');
+console.log(thumbnail[0], body);
 
 // 클릭 이벤트 했을 때, 내용이 들어가기
 thumbnail[0].addEventListener('click', function(e){
     e.preventDefault();
+    body.style.overflow = 'hidden';
     popupBg.style.display = 'block';
     popupImg.src = graphicData[0].src;
     popupImg.parentElement.style.width = '400px';
@@ -132,10 +134,12 @@ thumbnail[0].addEventListener('click', function(e){
     popupPlan.innerHTML =graphicData[0].contents;
     popupBg.addEventListener('click', function(){
         popupBg.style.display = ' none';
+        body.style.overflow ='auto';
     })
 });
 thumbnail[1].addEventListener('click', function(e){
     e.preventDefault();
+    body.style.overflow = 'hidden';
     popupBg.style.display = 'block'
     popupImg.src = graphicData[1].src;
     popupImg.parentElement.style.width = '400px';
@@ -147,9 +151,11 @@ thumbnail[1].addEventListener('click', function(e){
     popupPlan.innerHTML =graphicData[1].contents;
     popupBg.addEventListener('click', function(){
         popupBg.style.display = ' none';
+        body.style.overflow = 'auto';
     })
 });
 thumbnail[2].addEventListener('click', function(e){
+    body.style.overflow = 'hidden';
     e.preventDefault();
     popupBg.style.display = 'block'
     popupImg.src = graphicData[2].src;
@@ -162,10 +168,12 @@ thumbnail[2].addEventListener('click', function(e){
     popupPlan.innerHTML =graphicData[2].contents;
     popupBg.addEventListener('click', function(){
         popupBg.style.display = ' none';
+        body.style.overflow = 'auto';
     })
 });
 thumbnail[3].addEventListener('click', function(e){
     e.preventDefault();
+    body.style.overflow = 'hidden';
     popupBg.style.display = 'block'
     popupImg.src = graphicData[3].src;
     popupTitle.innerHTML =graphicData[3].title;
@@ -177,10 +185,12 @@ thumbnail[3].addEventListener('click', function(e){
     popupPlan.innerHTML =graphicData[3].contents;
     popupBg.addEventListener('click', function(){
         popupBg.style.display = ' none';
+        body.style.overflow = 'auto';
     })
 });
 thumbnail[4].addEventListener('click', function(e){
     e.preventDefault();
+    body.style.overflow = 'hidden';
     popupBg.style.display = 'block'
     popupImg.src = graphicData[4].src;
     popupTitle.innerHTML =graphicData[4].title;
@@ -192,10 +202,12 @@ thumbnail[4].addEventListener('click', function(e){
     popupPlan.innerHTML =graphicData[4].contents;
     popupBg.addEventListener('click', function(){
         popupBg.style.display = ' none';
+        body.style.overflow = 'auto';
     })
 });
 thumbnail[5].addEventListener('click', function(e){
     e.preventDefault();
+    body.style.overflow = 'hidden';
     popupBg.style.display = 'block'
     popupImg.src = graphicData[5].src;
     popupTitle.innerHTML =graphicData[5].title;
@@ -207,10 +219,12 @@ thumbnail[5].addEventListener('click', function(e){
     popupPlan.innerHTML =graphicData[5].contents;
     popupBg.addEventListener('click', function(){
         popupBg.style.display = ' none';
+        body.style.overflow = 'auto';
     })
 });
 thumbnail[6].addEventListener('click', function(e){
     e.preventDefault();
+    body.style.overflow = 'hidden';
     popupBg.style.display = 'block'
     popupImg.src = graphicData[6].src;
     popupImg.parentElement.style.width = '600px';
@@ -222,5 +236,6 @@ thumbnail[6].addEventListener('click', function(e){
     popupPlan.innerHTML =graphicData[6].contents;
     popupBg.addEventListener('click', function(){
         popupBg.style.display = ' none';
+        body.style.overflow = 'auto';
     })
 });
