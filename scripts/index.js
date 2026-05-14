@@ -239,3 +239,22 @@ thumbnail[6].addEventListener('click', function(e){
         body.style.overflow = 'auto';
     })
 });
+
+/* // 비디오를 클릭했을 때 실행되는 팝업 효과:작성중
+const popupVideoBg = document.querySelector('.video_popup_bg');
+const popupVideo = document.querySelector('.popup_video');
+console.log(popupVideoBg, popupVideo);
+
+// 클릭했을 때, 들어갈 내용 준비
+const videoData = [{
+    innerHTML:'<iframe width="1335" height="751" src="https://www.youtube.com/embed/_oaYUoU-9Y8" title="2021 국내산 우유·치즈 9초컷 광고 콘테스트 후보7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+},{
+    innerHTML:'<iframe width="1335" height="751" src="https://www.youtube.com/embed/S4045IyacbI" title="Stanley Holiday Collection Promotion Video ✨" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+},{
+    innerHTML:'<iframe width="1335" height="751" src="https://www.youtube.com/embed/au7PqaG6JME" title="Apple Music Promotion Video 🎧" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+},{
+    innerHTML:'<iframe width="458" height="815" src="https://www.youtube.com/embed/r-IntHLKmak" title="European Bread Intro Motion 🍞" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+}]
+
+// 대상선택
+const thumbnailV = document.querySelectorAll('.video_swiper .swiper-wrapper .swiper-slide') */
