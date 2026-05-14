@@ -52,3 +52,148 @@ const videoSwiper = new Swiper(video, {
     loop:true,
     pauseOnMouseEnter: true,
 })
+
+// 그래픽을 클릭했을 때 실행되는 팝업 효과 --------------------------------------------------------------
+const popupBg = document.querySelector('.graphic_popup_bg');
+const popupImg = document.querySelector('.graphic_contents .popup_img img');
+const popupTitle = document.querySelector('.popup_title h1');
+const popupPeriod = document.querySelector('.popup_title .period');
+const popupPhotoshop = document.querySelector('.popup_title .photoshop');
+const popupIllustration = document.querySelector('.popup_title .illustration');
+const popupPlan = document.querySelector('.popup_info .plan');
+console.log(popupBg, popupImg, popupTitle, popupPeriod, popupPhotoshop, popupIllustration, popupPlan);
+
+// 클릭했을 때, 들어갈 내용
+const graphicData = [{
+    src:'./images/graphic_001.jpg', //popupImg.src = grpahicData[0].src;
+    title: '## Home Appliance Promotion Banner',
+    tag:['4hours','Photoshop','Illustration'], //popupTag.textContent = graphicData[0].tag[0]
+    contents:'다이슨 스팟앤스크럽 AI 로봇청소기의 프로모션 배너 디자인입니다.AI 얼룩 감지 및 셀프 클린 롤러 기능을 강조하여 제품의 스마트한 청소 기능을 직관적으로 전달하였으며, 할인 프로모션과 함께 브랜드의 프리미엄 이미지를 표현할 수 있도록 디자인하였습니다.',
+},{
+    src:'./images/graphic_002.jpg',
+    title: '## Dermatology Event Banner',
+    tag:['4hours', 'Photoshop', 'Illustration'],
+    contents:'JUVELOOK i 정품 인증 이벤트를 주제로 제작한 피부과 프로모션 배너입니다. 정품 사용 병원의 신뢰감과 프리미엄 스킨부스터 이미지를 강조하였으며, 간결한 레이아웃과 고급스러운 무드로 시술 이벤트를 직관적으로 전달할 수 있도록 디자인하였습니다.',
+},{
+    src:'./images/graphic_003.jpg',
+    title: '## Product Graphic Design',
+    tag:['2hours', 'Photoshop', 'Illustration'],
+    contents:'‘통통새우 튀김우동’ 제품 홍보를 위한 그래픽 디자인 작업입니다. 제품의 특징과 먹음직스러운 비주얼을 강조하여 시선을 끌 수 있도록 구성했으며, 우동 이미지는 AI를 활용하여 제작했습니다.',
+},{
+    src:'./images/graphic_004.jpg',
+    title: '## Diary Promotion Design',
+    tag:['3hours', 'Photoshop', 'Illustration'],
+    contents:'소소문구 다이어리 제품 홍보를 위한 그래픽 디자인 작업입니다. 다이어리의 감성과 아날로그 무드를 중심으로 구성하였으며, 제품의 분위기와 활용성을 자연스럽게 전달할 수 있도록 디자인했습니다.',
+},{
+    src:'./images/graphic_005.jpg',
+    title: '## Book Detail Design',
+    tag:['4hours', 'Photoshop', 'Illustration'],
+    contents:'『괴테는 모든 것을 말했다』 도서를 주제로 제작한 상세페이지 디자인입니다. 도서의 감성과 핵심 내용을 효과적으로 전달할 수 있도록 구성하였으며, 차분한 무드와 가독성을 고려해 디자인 작업을 진행했습니다.',
+},{
+    src:'./images/graphic_006.jpg',
+    title: '## Product Graphic Design',
+    tag:['4hours', 'Photoshop', 'Illustration'],
+    contents:'풀무원 ‘밀누들 떡볶이’ 제품 홍보를 위한 그래픽 디자인 작업입니다. 제품의 매콤한 분위기와 식감을 시각적으로 표현하고, 먹음직스러운 비주얼과 브랜드 무드를 강조하여 제작했습니다.',
+},{
+    src:'./images/graphic_007.jpg',
+    title: 'Online Class Promotion Design',
+    tag:['3hours', 'Photoshop','Illustration'],
+    contents:'실무 중심 강좌를 주제로 제작한 인터넷 강의 홍보 디자인입니다.핵심 내용을 직관적으로 전달할 수 있도록 구성했으며,신뢰감 있는 레이아웃과 깔끔한 디자인을 중심으로 작업했습니다.',
+}]
+
+// 클릭할 대상 선택
+const thumbnail = document.querySelectorAll('.graphic_siwper .swiper-wrapper .swiper-slide');
+console.log(thumbnail[0]);
+
+// 클릭 이벤트 했을 때, 내용이 들어가기
+thumbnail[0].addEventListener('click', function(e){
+    e.preventDefault();
+    popupBg.style.display = 'block';
+    popupImg.src = graphicData[0].src;
+    popupTitle.innerHTML =graphicData[0].title;
+    popupPeriod.textContent = graphicData[0].tag[0];
+    popupPhotoshop.textContent = graphicData[0].tag[1];
+    popupIllustration.textContent = graphicData[0].tag[2];
+    popupPlan.innerHTML =graphicData[0].contents;
+    popupBg.addEventListener('click', function(){
+        popupBg.style.display = ' none';
+    })
+});
+thumbnail[1].addEventListener('click', function(e){
+    e.preventDefault();
+    popupBg.style.display = 'block'
+    popupImg.src = graphicData[1].src;
+    popupTitle.innerHTML =graphicData[1].title;
+    popupPeriod.textContent = graphicData[1].tag[0];
+    popupPhotoshop.textContent = graphicData[1].tag[1];
+    popupIllustration.textContent = graphicData[1].tag[2];
+    popupPlan.innerHTML =graphicData[1].contents;
+    popupBg.addEventListener('click', function(){
+        popupBg.style.display = ' none';
+    })
+});
+thumbnail[2].addEventListener('click', function(e){
+    e.preventDefault();
+    popupBg.style.display = 'block'
+    popupImg.src = graphicData[2].src;
+    popupTitle.innerHTML =graphicData[2].title;
+    popupPeriod.textContent = graphicData[2].tag[0];
+    popupPhotoshop.textContent = graphicData[2].tag[1];
+    popupIllustration.textContent = graphicData[2].tag[2];
+    popupPlan.innerHTML =graphicData[2].contents;
+    popupBg.addEventListener('click', function(){
+        popupBg.style.display = ' none';
+    })
+});
+thumbnail[3].addEventListener('click', function(e){
+    e.preventDefault();
+    popupBg.style.display = 'block'
+    popupImg.src = graphicData[3].src;
+    popupTitle.innerHTML =graphicData[3].title;
+    popupPeriod.textContent = graphicData[3].tag[0];
+    popupPhotoshop.textContent = graphicData[3].tag[1];
+    popupIllustration.textContent = graphicData[3].tag[2];
+    popupPlan.innerHTML =graphicData[3].contents;
+    popupBg.addEventListener('click', function(){
+        popupBg.style.display = ' none';
+    })
+});
+thumbnail[4].addEventListener('click', function(e){
+    e.preventDefault();
+    popupBg.style.display = 'block'
+    popupImg.src = graphicData[4].src;
+    popupTitle.innerHTML =graphicData[4].title;
+    popupPeriod.textContent = graphicData[4].tag[0];
+    popupPhotoshop.textContent = graphicData[4].tag[1];
+    popupIllustration.textContent = graphicData[4].tag[2];
+    popupPlan.innerHTML =graphicData[4].contents;
+    popupBg.addEventListener('click', function(){
+        popupBg.style.display = ' none';
+    })
+});
+thumbnail[5].addEventListener('click', function(e){
+    e.preventDefault();
+    popupBg.style.display = 'block'
+    popupImg.src = graphicData[5].src;
+    popupTitle.innerHTML =graphicData[5].title;
+    popupPeriod.textContent = graphicData[5].tag[0];
+    popupPhotoshop.textContent = graphicData[5].tag[1];
+    popupIllustration.textContent = graphicData[5].tag[2];
+    popupPlan.innerHTML =graphicData[5].contents;
+    popupBg.addEventListener('click', function(){
+        popupBg.style.display = ' none';
+    })
+});
+thumbnail[6].addEventListener('click', function(e){
+    e.preventDefault();
+    popupBg.style.display = 'block'
+    popupImg.src = graphicData[6].src;
+    popupTitle.innerHTML =graphicData[6].title;
+    popupPeriod.textContent = graphicData[6].tag[0];
+    popupPhotoshop.textContent = graphicData[6].tag[1];
+    popupIllustration.textContent = graphicData[6].tag[2];
+    popupPlan.innerHTML =graphicData[6].contents;
+    popupBg.addEventListener('click', function(){
+        popupBg.style.display = ' none';
+    })
+});

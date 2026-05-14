@@ -268,7 +268,7 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project2 .project_thumbnail .link {}
 .project2 .project_thumbnail .link a {}
 /* graphic design */
-.project3 {}
+.project3 {position: relative;}
 .project3 .title {}
 .project3 .title p {}
 .project3 .title img {}
@@ -296,18 +296,30 @@ header #gnb li.active a {border-top: 1px solid #222; color: #222;}
 .project3 .scroll {position: relative; width: 1300px; height: 2px; left: 50%; transform: translateX(-50%); bottom: -40px; background: #ddd;}
 .project3 .scroll .project_wrap .scroll .swiper-scrollbar-drag {background:#aaa;}
 /* project3 Graphic Design */
-.project3 .graphic_popup_bg {display: none;}
-.project3 .graphic_popup_bg .graphic_contents {}
-.project3 .graphic_popup_bg .graphic_contents .popup_img {}
-.project3 .graphic_popup_bg .graphic_contents .popup_img img {}
+.project3 .graphic_popup_bg {
+  width: 100vw;  height: 90vh; background: rgba(0,0,0,0.8);
+  position: absolute; top:0; left: 0; z-index: 50;
+  display: none;
+  }
+.project3 .graphic_popup_bg .graphic_contents {height: 100%; display: flex; align-items: center; justify-content: center; gap: 40px;}
+.project3 .graphic_popup_bg .graphic_contents .popup_img {width: 400px; height: 700px; overflow: auto;}
+.project3 .graphic_popup_bg .graphic_contents .popup_img img {width: 100%; background-size: cover; background-repeat: no-repeat;}
 .project3 .graphic_popup_bg .graphic_contents .popup_info {}
-.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title {}
-.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title h1 {}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title {margin-bottom: 10px;}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title > *, 
+.project3 .graphic_popup_bg .graphic_contents .popup_info .plan {color: #fff;}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title h1 {
+  font-family: 'DejaVuSansMono'; font-size: 0.88rem; color: #aaa; margin-bottom: 10px;
+}
 .project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .info {}
-.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .info .period {}
-.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .info .photoshop {}
-.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .info .illustration {}
-.project3 .graphic_popup_bg .graphic_contents .popup_info .plan {}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title span {
+  display: inline-block; background: #555; padding: 4px ; border-radius: 4px;
+  font-size: 0.75rem; letter-spacing: 0; margin-right: 4px;
+}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .period {}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .photoshop {}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .popup_title .illustration {}
+.project3 .graphic_popup_bg .graphic_contents .popup_info .plan {width: 300px; font-size: 0.88rem; line-height: 1.7;}
 
 /* UXUI app 1 */
 .project4 {}
