@@ -112,6 +112,11 @@ const graphicData = [{
     title: 'Online Class Promotion Design',
     tag:['3hours', 'Photoshop','Illustration'],
     contents:'실무 중심 강좌를 주제로 제작한 인터넷 강의 홍보 디자인입니다.핵심 내용을 직관적으로 전달할 수 있도록 구성했으며,신뢰감 있는 레이아웃과 깔끔한 디자인을 중심으로 작업했습니다.',
+},{
+    src:'./images/graphic_008.jpg',
+    title: '29CM Summer Promotion Design',
+    tag:['3hours', 'Photoshop','Illustration'],
+    contents:'29CM의 감성적인 썸머 프로모션 무드를 기반으로 제작한 디자인입니다. 뉴루키 브랜드의 시즌 룩북 콘셉트를 적용해 사진 프레임 효과로 매거진 스타일의 레이아웃을 연출했으며, 시원한 블루 컬러를 활용해 청량한 여름 분위기를 강조했습니다.',
 }]
 
 // 대상 선택
@@ -234,6 +239,23 @@ thumbnail[6].addEventListener('click', function(e){
     popupPhotoshop.textContent = graphicData[6].tag[1];
     popupIllustration.textContent = graphicData[6].tag[2];
     popupPlan.innerHTML =graphicData[6].contents;
+    popupBg.addEventListener('click', function(){
+        popupBg.style.display = ' none';
+        body.style.overflow = 'auto';
+    })
+});
+thumbnail[7].addEventListener('click', function(e){
+    e.preventDefault();
+    body.style.overflow = 'hidden';
+    popupBg.style.display = 'block'
+    popupImg.src = graphicData[7].src;
+    popupImg.parentElement.style.width = '400px';
+    popupImg.parentElement.style.height = '550px';
+    popupTitle.innerHTML =graphicData[7].title;
+    popupPeriod.textContent = graphicData[7].tag[0];
+    popupPhotoshop.textContent = graphicData[7].tag[1];
+    popupIllustration.textContent = graphicData[7].tag[2];
+    popupPlan.innerHTML =graphicData[7].contents;
     popupBg.addEventListener('click', function(){
         popupBg.style.display = ' none';
         body.style.overflow = 'auto';
