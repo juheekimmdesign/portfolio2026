@@ -240,21 +240,73 @@ thumbnail[6].addEventListener('click', function(e){
     })
 });
 
-/* // 비디오를 클릭했을 때 실행되는 팝업 효과:작성중
+// 비디오를 클릭했을 때 실행되는 팝업 효과:작성중
 const popupVideoBg = document.querySelector('.video_popup_bg');
 const popupVideo = document.querySelector('.popup_video');
-console.log(popupVideoBg, popupVideo);
+const youtubeBtn = document.querySelector('.video_popup_bg .youtube_btn')
+console.log(popupVideoBg, popupVideo, youtubeBtn);
 
 // 클릭했을 때, 들어갈 내용 준비
 const videoData = [{
-    innerHTML:'<iframe width="1335" height="751" src="https://www.youtube.com/embed/_oaYUoU-9Y8" title="2021 국내산 우유·치즈 9초컷 광고 콘테스트 후보7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+    innerHTML:'<iframe width="1335" height="751" src="https://www.youtube.com/embed/_oaYUoU-9Y8?autoplay=1&?controls=0&modestbranding=1&rel=0" title="2021 국내산 우유·치즈 9초컷 광고 콘테스트 후보7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+    href:'https://youtu.be/_oaYUoU-9Y8?si=EdwweRJ4hGCuVltT',
 },{
-    innerHTML:'<iframe width="1335" height="751" src="https://www.youtube.com/embed/S4045IyacbI" title="Stanley Holiday Collection Promotion Video ✨" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+    innerHTML:'<iframe width="1335" height="751" src="https://www.youtube.com/embed/S4045IyacbI?autoplay=1&?controls=0&modestbranding=1&rel=0" title="Stanley Holiday Collection Promotion Video ✨" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+    href:'https://youtu.be/S4045IyacbI?si=aKlYQczyruUnJBry',
 },{
-    innerHTML:'<iframe width="1335" height="751" src="https://www.youtube.com/embed/au7PqaG6JME" title="Apple Music Promotion Video 🎧" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+    innerHTML:'<iframe width="1335" height="751" src="https://www.youtube.com/embed/au7PqaG6JME?autoplay=1&?controls=0&modestbranding=1&rel=0" title="Apple Music Promotion Video 🎧" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+    href:'https://youtu.be/au7PqaG6JME?si=g6RhSS9J_Islu4WV',
 },{
-    innerHTML:'<iframe width="458" height="815" src="https://www.youtube.com/embed/r-IntHLKmak" title="European Bread Intro Motion 🍞" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+    innerHTML:'<iframe width="458" height="815" src="https://www.youtube.com/embed/r-IntHLKmak?autoplay=1&?controls=0&modestbranding=1&rel=0" title="European Bread Intro Motion 🍞" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+    href:'https://youtube.com/shorts/r-IntHLKmak?si=5y30w-IZfkqGOZmL' ,
 }]
 
 // 대상선택
-const thumbnailV = document.querySelectorAll('.video_swiper .swiper-wrapper .swiper-slide') */
+const thumbnailV = document.querySelectorAll('.video_swiper .swiper-wrapper .swiper-slide');
+console.log(thumbnailV);
+
+// 클릭 이벤트 했을 때, 영상 들어가기
+thumbnailV[0].addEventListener('click', function(){
+    console.log('클릭 비디오');
+    body.style.overflow = 'hidden';
+    popupVideoBg.style.display = 'block';
+    popupVideo.innerHTML = videoData[0].innerHTML;
+    youtubeBtn.href = videoData[0].href
+    popupVideoBg.addEventListener('click', function(){
+        popupVideoBg.style.display = 'none';
+        body.style.overflow = 'auto';
+    })
+})
+thumbnailV[1].addEventListener('click', function(){
+    console.log('클릭 비디오');
+    body.style.overflow = 'hidden';
+    popupVideoBg.style.display = 'block';
+    youtubeBtn.href = videoData[1].href
+    popupVideo.innerHTML = videoData[1].innerHTML;
+    popupVideoBg.addEventListener('click', function(){
+        popupVideoBg.style.display = 'none';
+        body.style.overflow = 'auto';
+    })
+})
+thumbnailV[2].addEventListener('click', function(){
+    console.log('클릭 비디오');
+    body.style.overflow = 'hidden';
+    popupVideoBg.style.display = 'block';
+    youtubeBtn.href = videoData[2].href
+    popupVideo.innerHTML = videoData[2].innerHTML;
+    popupVideoBg.addEventListener('click', function(){
+        popupVideoBg.style.display = 'none';
+        body.style.overflow = 'auto';
+    })
+})
+thumbnailV[3].addEventListener('click', function(){
+    console.log('클릭 비디오');
+    body.style.overflow = 'hidden';
+    popupVideoBg.style.display = 'block';
+    popupVideo.innerHTML = videoData[3].innerHTML;
+    youtubeBtn.href = videoData[3].href
+    popupVideoBg.addEventListener('click', function(){
+        popupVideoBg.style.display = 'none';
+        body.style.overflow = 'auto';
+    })
+})
