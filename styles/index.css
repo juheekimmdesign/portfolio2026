@@ -187,11 +187,13 @@ header #gnb li:hover a {color: #222;}
   background: #fff;
 }
 /* 마우스 호버시에 이미지 변경 */
+.project_wrap .project_swiper .swiper-wrapper .slide0 a {background-image: url(../images/project_000.jpg);}
 .project_wrap .project_swiper .swiper-wrapper .slide1 a {background-image: url(../images/project_001.jpg);}
 .project_wrap .project_swiper .swiper-wrapper .slide2 a {background-image: url(../images/project_002.jpg);}
 .project_wrap .project_swiper .swiper-wrapper .slide3 a {background-image: url(../images/project_003.jpg);}
 .project_wrap .project_swiper .swiper-wrapper .slide4 a {background-image: url(../images/project_004.jpg);}
 .project_wrap .project_swiper .swiper-wrapper .slide5 a {background-image: url(../images/project_005.jpg);}
+.project_wrap .project_swiper .swiper-wrapper .slide0:hover a {background-image: url(../images/project_hover_000.jpg);}
 .project_wrap .project_swiper .swiper-wrapper .slide1:hover a {background-image: url(../images/project_hover_001.jpg);}
 .project_wrap .project_swiper .swiper-wrapper .slide2:hover a {background-image: url(../images/project_hover_002.jpg);}
 .project_wrap .project_swiper .swiper-wrapper .slide3:hover a {background-image: url(../images/project_hover_003.jpg);}
@@ -244,6 +246,26 @@ header #gnb li:hover a {color: #222;}
 /* 링크버튼에 호버했을 때 */
 .project .project_thumbnail .link a:hover {background: rgba(85,85,85,0.8); }
 .project .project_thumbnail .link a:hover span {color: #fff;}
+/* project0 - swimlove */
+.project0 .project_intro .title {}
+.project0 .project_intro .title .type {}
+.project0 .project_intro .titl  .main_title {}
+.project0 .project_intro .title .main_title .brand {}
+.project0 .project_intro .title .main_title .desktop {}
+.project0 .project_intro .title .main_title .movile {}
+.project0 .project_intro .title .ko_title {}
+.project0 .project_intro .title .en_title {}
+.project0 .project_intro .title .en_title {}
+.project0 .project_intro .title .responsive {}
+.project0 .project_intro dl {}
+.project0 .project_intro dl dt {}
+.project0 .project_intro dl dd {}
+.project0 .project_intro .tools {}
+.project0 .project_intro .tools h1 {}
+.project0 .project_intro .tools .tools_badge img {}
+.project0 .project_thumbnail {background-image: url(../images/thumbnail_000.jpg);}
+.project0 .project_thumbnail .link {}
+.project0 .project_thumbnail .link a {}
 /* project1 - toun28 */
 .project1 .project_intro .title {}
 .project1 .project_intro .title .type {}
